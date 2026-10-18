@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me — Ravi Kumar | UI/UX Designer & Web Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="about-page">
+
+  <!-- Preloader Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-text" id="loader-text">Loading 0%</div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill" id="loader-fill"></div>
+    </div>
+  </div>
+
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar">
+    <a href="index.html#home" class="logo">Ravi<span>.Portfolio</span></a>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right-actions">
+      <button onclick="downloadResume()" class="btn-resume-nav"><i class="fa-solid fa-download"></i> Resume</button>
+      <a href="contact.html" class="btn-touch">Get in touch <span class="arrow"><i
+            class="bi bi-arrow-right"></i></span></a>
+    </div>
+  </header>
+
+  <!-- Background Decorative Contour Lines SVG -->
+  <div class="bg-decorative-lines">
+    <svg width="100%" height="100%" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="none">
+      <path d="M-100 180 C300 40, 700 420, 1540 80" stroke="rgba(138, 43, 226, 0.22)" stroke-width="1.5" />
+      <path d="M-100 480 C400 780, 900 180, 1540 580" stroke="rgba(255, 94, 54, 0.18)" stroke-width="1.5" />
+      <path d="M-100 720 C500 380, 800 820, 1540 680" stroke="rgba(99, 102, 241, 0.16)" stroke-width="1.5" />
+    </svg>
+  </div>
+
+  <!-- Content Wrapper -->
+  <main class="content-wrapper">
+
+    <!-- Section 1 (TOP): Title, Subtext & Intro Profile -->
+    <section class="about-hero-section">
+      <div class="about-hero-card glass-card">
+        <div class="about-hero-left">
+          <div class="about-badge"><i class="fa-solid fa-sparkles"></i> ABOUT ME</div>
+          <h1 class="about-hero-title">Shaping Experiences That Make Life Simpler</h1>
+          <p class="about-hero-subtext">
+            Hi! My name is <strong>Ravi Kumar</strong>. I am a <strong>UI/UX Designer & Web Designer</strong> based in
+            Chandigarh, India, with 3+ years turning ambiguous product requirements into validated user flows,
+            information architecture, and clean, systemized interfaces.
+          </p>
+          <div class="about-objective-box">
+            <span class="objective-label">My Profile Summary</span>
+            <p class="objective-desc">
+              Skilled in user research, usability testing, and Figma-based prototyping (components, variants,
+              auto-layout), with working front-end fluency (Angular, HTML5, CSS, Bootstrap, Tailwind) that keeps design
+              and delivery tightly aligned.
+            </p>
+          </div>
+
+          <div class="about-contact-grid">
+            <div class="a-contact-item copy-email" data-email="7055ravikumar@gmail.com">
+              <i class="fa-regular fa-envelope"></i>
+              <span>7055ravikumar@gmail.com</span>
+            </div>
+            <div class="a-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 70555 22514</span>
+            </div>
+            <a href="https://linkedin.com/in/ravi-kumar-842b02250" target="_blank" class="a-contact-item"
+              style="text-decoration:none;">
+              <i class="fab fa-linkedin-in"></i>
+              <span>linkedin.com/in/ravi-kumar-842b02250</span>
+            </a>
+            <div class="a-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Chandigarh, India</span>
+            </div>
+          </div>
+
+          <div class="hero-resume-actions" style="margin-top: 25px;">
+            <button onclick="downloadResume()" class="r-hero-btn primary">
+              <i class="fa-solid fa-download"></i> Download Resume
+            </button>
+            <a href="resume.html" class="r-hero-btn secondary">
+              <i class="fa-solid fa-eye"></i> View Resume
+            </a>
+            <button onclick="openResumeUploadModal()" class="r-hero-btn outline">
+              <i class="fa-solid fa-upload"></i> Upload New CV
+            </button>
+          </div>
+        </div>
+
+        <div class="about-hero-right">
+          <div class="about-photo-card">
+            <div class="photo-glow-effect"></div>
+            <div class="photo-img-frame">
+              <img src="images/ravi.png" alt="Ravi Kumar - UI/UX Designer & Web Designer">
+            </div>
+            <div class="photo-caption-badge">
+              <span class="dot-online"></span>
+              <span>Available for New Projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Software Skills Circular Rings Strip -->
+    <section class="software-skills-section">
+      <div class="section-header-center">
+        <span class="section-tag">TOOLKIT & STACK</span>
+        <h2 class="section-heading">Software Skills</h2>
+        <p class="section-subtext">Industry-standard tools and technologies I use to design, wireframe, prototype, and
+          build production UI.</p>
+      </div>
+
+      <div class="software-skills-grid">
+
+        <!-- Figma -->
+        <div class="skill-ring-card glass-card">
+          <div class="ring-container ring-orange">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+              <circle cx="50" cy="50" r="42" class="ring-fill fill-95"></circle>
+            </svg>
+            <div class="ring-badge badge-figma">Fg</div>
+          </div>
+          <h4 class="ring-title">Figma</h4>
+          <p class="ring-desc">UI/UX & Design Systems</p>
+        </div>
+
+        <!-- Adobe XD -->
+        <div class="skill-ring-card glass-card">
+          <div class="ring-container ring-pink">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+              <circle cx="50" cy="50" r="42" class="ring-fill fill-85"></circle>
+            </svg>
+            <div class="ring-badge badge-xd">Xd</div>
+          </div>
+          <h4 class="ring-title">Adobe XD</h4>
+          <p class="ring-desc">Wireframing & UI Layouts</p>
+        </div>
+
+        <!-- Adobe Photoshop -->
+        <div class="skill-ring-card glass-card">
+          <div class="ring-container ring-blue">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+              <circle cx="50" cy="50" r="42" class="ring-fill fill-85"></circle>
+            </svg>
+            <div class="ring-badge badge-ps">Ps</div>
+          </div>
+          <h4 class="ring-title">Adobe Photoshop</h4>
+          <p class="ring-desc">Image Editing & Visual Assets</p>
+        </div>
+
+        <!-- Adobe Illustrator -->
+        <div class="skill-ring-card glass-card">
+          <div class="ring-container ring-gold">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+              <circle cx="50" cy="50" r="42" class="ring-fill fill-90"></circle>
+            </svg>
+            <div class="ring-badge badge-ai">Ai</div>
+          </div>
+          <h4 class="ring-title">Adobe Illustrator</h4>
+          <p class="ring-desc">Vector Graphics & Branding</p>
+        </div>
+
+        <!-- Angular -->
+        <div class="skill-ring-card glass-card">
+          <div class="ring-container ring-purple">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+              <circle cx="50" cy="50" r="42" class="ring-fill fill-80"></circle>
+            </svg>
+            <div class="ring-badge badge-ae">A</div>
+          </div>
+          <h4 class="ring-title">Angular</h4>
+          <p class="ring-desc">WebSite Code</p>
+        </div>
+
+        <!-- Web Code -->
+        <div class="skill-ring-card glass-card">
+          <div class="ring-container ring-cyan">
+            <svg class="ring-svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+              <circle cx="50" cy="50" r="42" class="ring-fill fill-90"></circle>
+            </svg>
+            <div class="ring-badge badge-code">&lt;/&gt;</div>
+          </div>
+          <h4 class="ring-title">Web Stack</h4>
+          <p class="ring-desc">HTML5 / CSS3 / Tailwind</p>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Section 3: Sculpted Purple Glass Container for Education, Skillset & Matrix -->
+    <section class="about-matrix-section">
+      <div class="purple-sculpted-card">
+        <div class="sculpted-inner-glow"></div>
+
+        <div class="matrix-grid">
+
+          <!-- Education -->
+          <div class="matrix-box matrix-edu">
+            <div class="matrix-header">
+              <h3 class="matrix-title">Education</h3>
+              <span class="year-pill">2016 – 2021</span>
+            </div>
+            <p class="edu-university">HNBGU — Graphic & Information Technology</p>
+            <div class="edu-degree-list">
+              <div class="degree-row">
+                <span class="deg-title">MSc (Information Technology)</span>
+                <span class="deg-years">2019 – 2021</span>
+              </div>
+              <div class="degree-row">
+                <span class="deg-title">BSc (Information Technology)</span>
+                <span class="deg-years">2016 – 2019</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skill -->
+          <div class="matrix-box matrix-soft">
+            <h3 class="matrix-title">Soft skill</h3>
+            <div class="two-col-skills">
+              <div class="skill-col">
+                <span>Teamwork</span>
+                <span>Communication</span>
+              </div>
+              <div class="v-divider"></div>
+              <div class="skill-col">
+                <span>Critical Thinking</span>
+                <span>Time Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Skill -->
+          <div class="matrix-box matrix-tech">
+            <div class="matrix-box matrix-set">
+              <h3 class="matrix-title">Technical skill</h3>
+              <div class="two-col-skills">
+                <div class="skill-col">
+                  <span>Design Software</span>
+                  <span>Wireframing</span>
+                  <span>Prototyping</span>
+                </div>
+                <div class="v-divider"></div>
+                <div class="skill-col">
+                  <span>Design Systems</span>
+                  <span>Responsive Layouts</span>
+                  <span>Basic Coding</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Skill set -->
+          <div class="matrix-box matrix-set">
+            <h3 class="matrix-title">Skill set</h3>
+            <div class="two-col-skills">
+              <div class="skill-col">
+                <span>User research</span>
+                <span>Information Architecture</span>
+                <span>Collaboration</span>
+              </div>
+              <div class="v-divider"></div>
+              <div class="skill-col">
+                <span>Design Judgment / Taste</span>
+                <span>Empathy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interest -->
+          <div class="matrix-box matrix-interest">
+            <h3 class="matrix-title">Interest</h3>
+            <div class="horizontal-tags">
+              <span>Design Trends</span>
+              <span class="bar-separator">|</span>
+              <span>Technology</span>
+              <span class="bar-separator">|</span>
+              <span>AI-Assisted Workflows</span>
+            </div>
+          </div>
+
+          <!-- Language -->
+          <div class="matrix-box matrix-language">
+            <h3 class="matrix-title">Language</h3>
+            <div class="horizontal-tags">
+              <span>English (Professional)</span>
+              <span class="bar-separator">|</span>
+              <span>Hindi (Native)</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Design Philosophy & Core Values -->
+    <section class="philosophy-section">
+      <div class="section-header-center">
+        <span class="section-tag">MY APPROACH</span>
+        <h2 class="section-heading">DESIGN PHILOSOPHY & CORE VALUES</h2>
+        <p class="section-subtext">Four foundational principles guiding every user experience, design system, and
+          frontend interaction I create.</p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="ph-card glass-card">
+          <div class="ph-icon-box icon-orange">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3 class="ph-title">User-Centric First</h3>
+          <p class="ph-desc">
+            Deep research and empathy precede every design layout. Understanding pain points, user flows, and
+            accessibility ensures intuitive digital experiences.
+          </p>
+        </div>
+
+        <div class="ph-card glass-card">
+          <div class="ph-icon-box icon-purple">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <h3 class="ph-title">Scalable Systems</h3>
+          <p class="ph-desc">
+            Crafting structured Figma design tokens, modular component libraries, and UI kits for consistency and rapid
+            engineering handoff.
+          </p>
+        </div>
+
+        <div class="ph-card glass-card">
+          <div class="ph-icon-box icon-blue">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 class="ph-title">Mobile-First Precision</h3>
+          <p class="ph-desc">
+            Designing for smaller viewports first guarantees fast load performance, clear visual hierarchy, and flawless
+            execution across desktop and mobile screens.
+          </p>
+        </div>
+
+        <div class="ph-card glass-card">
+          <div class="ph-icon-box icon-green">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="ph-title">AI-Assisted Innovation</h3>
+          <p class="ph-desc">
+            Combining design expertise with modern AI tools (ChatGPT, Claude, Copilot) to accelerate research,
+            prototyping, and code iterations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Icon Index Section 3: Industrial Skills -->
+    <section class="icon-index-section">
+      <div class="icon-index-card glass-card">
+        <div class="icon-index-header">
+          <h2 class="icon-index-title">INDUSTRIAL SKILLS</h2>
+          <span class="mint-accent-line"></span>
+        </div>
+        <div class="icon-index-content-grid">
+          <div class="icon-index-items-grid">
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-user-gear"></i></div>
+              <span class="icon-index-label">USER-CENTERED DESIGN</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-book-open-reader"></i></div>
+              <span class="icon-index-label">UX RESEARCH</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-palette"></i></div>
+              <span class="icon-index-label">VISUAL DESIGN</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-pen-nib"></i></div>
+              <span class="icon-index-label">UX WRITING</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-border-all"></i></div>
+              <span class="icon-index-label">WIREFRAMING</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-universal-access"></i></div>
+              <span class="icon-index-label">ACCESSIBILITY (A11Y)</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <span class="icon-index-label">UI PROTOTYPING</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-cubes"></i></div>
+              <span class="icon-index-label">DESIGN SYSTEMS</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-arrow-pointer"></i></div>
+              <span class="icon-index-label">INTERACTION DESIGN</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-user-check"></i></div>
+              <span class="icon-index-label">USABILITY TESTING</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-table-cells"></i></div>
+              <span class="icon-index-label">STORYBOARDING</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-sitemap"></i></div>
+              <span class="icon-index-label">INFORMATION ARCHITECTURE</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-code-branch"></i></div>
+              <span class="icon-index-label">OBJECT ORIENTED PROGRAMMING</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-terminal"></i></div>
+              <span class="icon-index-label">COMMAND LINE</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-wrench"></i></div>
+              <span class="icon-index-label">BROWSER DEVELOPER TOOLS</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+              <span class="icon-index-label">RESPONSIVE WEB DESIGN</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-user-shield"></i></div>
+              <span class="icon-index-label">USER TESTING</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-sliders"></i></div>
+              <span class="icon-index-label">A/B TESTING</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Icon Index Section 1: Tools & Technology -->
+    <section class="icon-index-section">
+      <div class="icon-index-card glass-card">
+        <div class="icon-index-header">
+          <h2 class="icon-index-title">TOOLS AND TECHNOLOGY</h2>
+          <span class="mint-accent-line"></span>
+        </div>
+        <div class="icon-index-content-grid">
+          <div class="icon-index-items-grid">
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-brands fa-figma"></i></div>
+              <span class="icon-index-label">FIGMA</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-solid fa-briefcase"></i></div>
+              <span class="icon-index-label">ADOBE XD</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box">
+                <img src="images/C.png" alt="Tools">
+                
+              </div>
+              <span class="icon-index-label">Canva</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box">
+                <img src="images/adobe-photoshop.png" alt="Tools">
+              </div>
+              <span class="icon-index-label">Adobe Photoshop</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box">
+                <img src="images/adobe-illustrator.png" alt="Tools">
+              </div>
+              <span class="icon-index-label">Adobe Illustrator</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-brands fa-github"></i></div>
+              <span class="icon-index-label">GITHUB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Icon Index Section 2: My Skills Include -->
+    <section class="icon-index-section">
+      <div class="icon-index-card glass-card">
+        <div class="icon-index-header">
+          <h2 class="icon-index-title">MY SKILLS INCLUDE</h2>
+          <span class="mint-accent-line"></span>
+        </div>
+        <div class="icon-index-content-grid">
+          <div class="icon-index-items-grid">
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-brands fa-angular"></i></div>
+              <span class="icon-index-label">Angular</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-brands fa-html5"></i></div>
+              <span class="icon-index-label">HTML</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-brands fa-css3-alt"></i></div>
+              <span class="icon-index-label">CSS</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-brands fa-sass"></i></div>
+              <span class="icon-index-label">SASS</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-brands fa-bootstrap"></i></div>
+              <span class="icon-index-label">BOOTSTRAP</span>
+            </div>
+            <div class="icon-index-item">
+              <div class="icon-index-icon-box"><i class="fa-brands fa-js"></i></div>
+              <span class="icon-index-label">JAVASCRIPT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section 5: Contact & Footer -->
+    <section id="contact" class="contact-section">
+
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="connect-let">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="contact-heading">Let's Build Something Meaningful Together</h2>
+          </div>
+          <div class="footer-top-grid">
+
+            <!-- Column 1: Brand & Bio -->
+            <div class="footer-brand-col">
+              <h3 class="footer-logo">Ravi<span>.Portfolio</span></h3>
+              <p class="footer-tagline">
+                Crafting digital products that inspire, connect, and scale modern businesses.
+              </p>
+            </div>
+
+            <!-- Column 2: Navigation -->
+            <div>
+              <h4 class="footer-heading">NAVIGATION</h4>
+              <ul class="footer-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Social -->
+            <div>
+              <h4 class="footer-heading">SOCIAL</h4>
+              <ul class="footer-links">
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Direct Contact -->
+            <div>
+              <h4 class="footer-heading">DIRECT</h4>
+              <div class="footer-direct-info">
+                <a href="mailto:7055ravikumar@gmail.com" class="footer-email">7055ravikumar@gmail.com</a>
+                <p class="footer-location">Chandigarh, India</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="footer-divider"></div>
+
+          <!-- Bottom Bar -->
+          <div class="footer-bottom-bar">
+            <p class="footer-copyright>© 2026 Ravi Kumar. All rights reserved.</p>
+            <a href=" #" class="footer-back-to-top"
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+              Back to top <span class="arrow">↑</span>
+              </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Resume Upload Modal -->
+  <div class="resume-modal-backdrop" id="resumeUploadModal">
+    <div class="resume-modal-card glass-card">
+      <button class="modal-close-btn" onclick="closeResumeUploadModal()">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Upload Resume / CV</h3>
+        <p>Select or drag & drop a resume file (.pdf, .doc, .docx) to update your portfolio CV.</p>
+      </div>
+
+      <div class="upload-drag-zone" id="uploadDragZone">
+        <i class="fa-solid fa-file-pdf upload-zone-icon"></i>
+        <p class="zone-text">Drag & drop your resume file here, or <span class="browse-link">browse file</span></p>
+        <span class="zone-subtext">Supports PDF, DOC, DOCX files up to 10MB</span>
+        <input type="file" id="resumeFileInput" accept=".pdf,.doc,.docx" hidden onchange="handleFileSelect(event)">
+      </div>
+
+      <div class="uploaded-file-preview" id="uploadedFilePreview" style="display:none;">
+        <div class="file-info-badge">
+          <i class="fa-solid fa-file-circle-check"></i>
+          <div>
+            <strong id="previewFileName">Resume.pdf</strong>
+            <span id="previewFileSize">240 KB</span>
+          </div>
+        </div>
+        <button class="btn-remove-file" onclick="resetUploadedResume()" title="Remove file"><i
+            class="fa-solid fa-trash-can"></i></button>
+      </div>
+
+      <div class="modal-footer-actions">
+        <button class="modal-btn secondary" onclick="closeResumeUploadModal()">Cancel</button>
+        <button class="modal-btn primary" id="saveResumeBtn" onclick="saveUploadedResume()" disabled>
+          <i class="fa-solid fa-check"></i> Save & Apply Resume
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

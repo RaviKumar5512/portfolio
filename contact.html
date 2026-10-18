@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me — Ravi Kumar | UI/UX Designer & Web Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="contact-page">
+
+  <!-- Preloader Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-text" id="loader-text">Loading 0%</div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill" id="loader-fill"></div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar">
+    <a href="index.html#home" class="logo">Ravi<span>.Portfolio</span></a>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="project.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-right-actions">
+      <button onclick="downloadResume()" class="btn-resume-nav"><i class="fa-solid fa-download"></i> Resume</button>
+      <a href="contact.html" class="btn-touch">Get in touch <span class="arrow"><i class="bi bi-arrow-right"></i></span></a>
+    </div>
+  </header>
+
+  <!-- Content Wrapper -->
+  <main class="content-wrapper">
+
+    <!-- Section 1 (TOP): Title & Subtext Hero Header -->
+    <section class="contact-hero-section">
+      <div class="contact-hero-card glass-card">
+        <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> LET'S TALK</span>
+        <h1 class="contact-hero-title">Get In Touch & Start A Conversation</h1>
+        <p class="contact-hero-subtext">
+          Have a project in mind, need design consultation, or looking for an experienced <strong>UI/UX Designer & Web
+            Designer</strong> to join your team? Reach out and let's craft intuitive digital experiences together.
+        </p>
+
+        <div class="contact-badge-chips">
+          <div class="c-chip">
+            <i class="fa-solid fa-clock"></i>
+            <span>Response Time &lt; 24 Hours</span>
+          </div>
+          <div class="c-chip">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Available for Freelance & Full-time</span>
+          </div>
+          <div class="c-chip">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Chandigarh, India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Main Contact Hub (Interactive Form & Floating Glass Card) -->
+    <section class="contact-hub-section">
+      <div class="contact-hub-grid">
+
+        <!-- Left Column: Interactive Contact Form -->
+        <div class="contact-form-card glass-card">
+          <div class="form-header">
+            <h3>Send Me A Message</h3>
+            <p>Fill out the form below with your project scope, timeline, and goals.</p>
+          </div>
+
+          <form class="contact-main-form"
+            onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.');">
+            <div class="c-form-grid">
+              
+              <div class="c-field">
+                <label>Name</label>
+                <input type="text" placeholder="Your Full Name" required>
+              </div>
+
+              <div class="c-field">
+                <label>Email Address</label>
+                <input type="email" placeholder="john@example.com" required>
+              </div>
+
+              <div class="c-field">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Add Number">
+              </div>
+
+              <div class="field">
+                <label>Budget</label>
+                <div class="multi-select">
+                  <div class="select-wrapper">
+                    <input type="text" class="select" name="select" value="Option 1" readonly>
+                  </div>
+                  <div class="options">
+                    <p class="item active">Under $1,000</p>
+                    <p class="item">$1,000 - $5,000</p>
+                    <p class="item">$5,000 - $10,000</p>
+                    <p class="item">Over $10,000</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Timeline</label>
+                <div class="multi-select">
+                  <div class="select-wrapper">
+                    <input type="text" class="select" name="select" value="Less than 2 weeks" readonly>
+                  </div>
+                  <div class="options">
+                    <p class="item active">Less than 2 weeks</p>
+                    <p class="item">1 Month</p>
+                    <p class="item">2 Months</p>
+                    <p class="item">Flexible</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="c-field full-width">
+                <label>Project Details / Comments</label>
+                <textarea rows="5"
+                  placeholder="Tell me about your product vision, key features, or what help you need..."
+                  required></textarea>
+              </div>
+
+            </div>
+
+            <button type="submit" class="c-submit-btn">
+              <span>Send Message</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right Column: Sleek Floating Glass Contact Details Card -->
+        <div class="contact-info-glass-card glass-card">
+          <div class="info-card-header">
+            <span class="info-card-badge">
+              <span class="dot-online"></span> Available for New Projects
+            </span>
+            <h3 class="info-card-title">Direct Contact Information</h3>
+          </div>
+
+          <div class="info-details-list">
+
+            <!-- Email Item -->
+            <div class="info-item-row copy-email" data-email="7055ravikumar@gmail.com">
+              <div class="info-item-icon">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div class="info-item-content">
+                <span class="info-item-label">Email Address</span>
+                <span class="info-item-val" id="contactEmail">7055ravikumar@gmail.com</span>
+              </div>
+              <button class="copy-mini-btn">Copy</button>
+            </div>
+
+            <!-- Phone Item -->
+            <div class="info-item-row">
+              <div class="info-item-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="info-item-content">
+                <span class="info-item-label">Phone / WhatsApp</span>
+                <span class="info-item-val">+91 70555 22514</span>
+              </div>
+            </div>
+
+            <!-- Location Item -->
+            <div class="info-item-row">
+              <div class="info-item-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info-item-content">
+                <span class="info-item-label">Location</span>
+                <span class="info-item-val">Chandigarh, ITBP Behalana, India</span>
+              </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="info-item-row">
+              <div class="info-item-icon">
+                <i class="fa-solid fa-business-time"></i>
+              </div>
+              <div class="info-item-content">
+                <span class="info-item-label">Working Hours</span>
+                <span class="info-item-val">Mon – Sat (09:00 AM – 07:00 PM IST)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="social-connect-box">
+            <span class="social-connect-title">Social Profiles & Resume</span>
+            <div class="social-icons-row">
+              <a href="https://linkedin.com/in/ravi-kumar-842b02250" target="_blank" class="social-circle-btn" title="LinkedIn Profile"><i
+                  class="fab fa-linkedin-in"></i></a>
+              <a href="mailto:7055ravikumar@gmail.com" class="social-circle-btn" title="Email Me"><i
+                  class="fa-regular fa-envelope"></i></a>
+              <a href="tel:7055522514" class="social-circle-btn" title="Call Me"><i class="fa-solid fa-phone"></i></a>
+            </div>
+
+            <div class="contact-resume-actions" style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+              <button onclick="downloadResume()" class="r-hero-btn primary" style="padding:8px 16px; font-size:0.85rem;">
+                <i class="fa-solid fa-download"></i> Download CV
+              </button>
+              <!-- <button onclick="openResumeUploadModal()" class="r-hero-btn outline" style="padding:8px 16px; font-size:0.85rem;">
+                <i class="fa-solid fa-upload"></i> Upload CV
+              </button> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: Engagement Options & Collaboration Models -->
+    <section class="collaboration-section">
+      <div class="section-header-center">
+        <span class="section-tag">COLLABORATION MODELS</span>
+        <h2 class="section-heading">HOW WE CAN WORK TOGETHER</h2>
+        <p class="section-subtext">Flexible engagement options tailored for startups, agencies, and enterprise product
+          teams.</p>
+      </div>
+
+      <div class="collab-grid">
+        <div class="collab-card glass-card">
+          <div class="collab-icon-box icon-box-orange">
+            <i class="fa-solid fa-user-plus"></i>
+          </div>
+          <h3 class="collab-title">Full-Time & Contract Roles</h3>
+          <p class="collab-desc">
+            Joining your core engineering & design team to drive long-term UI/UX architecture, mobile-first web designs,
+            and design systems.
+          </p>
+        </div>
+
+        <div class="collab-card glass-card">
+          <div class="collab-icon-box icon-box-mint">
+            <i class="fa-solid fa-cubes-stacked"></i>
+          </div>
+          <h3 class="collab-title">End-to-End Product Design</h3>
+          <p class="collab-desc">
+            Transforming product ideas into validated wireframes, Figma UI prototypes, design tokens, and frontend
+            production code.
+          </p>
+        </div>
+
+        <div class="collab-card glass-card">
+          <div class="collab-icon-box icon-box-blue">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="collab-title">UI Audit & Design Systems</h3>
+          <p class="collab-desc">
+            Auditing existing web platforms to optimize usability, accessibility (A11y), visual consistency, and
+            responsive performance.
+          </p>
+        </div>
+
+        <div class="collab-card glass-card">
+          <div class="collab-icon-box icon-box-purple">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="collab-title">Project Consultation & Handoff</h3>
+          <p class="collab-desc">
+            Delivering clean Angular, Bootstrap, and Tailwind CSS code handoffs along with interactive design component
+            documentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Frequently Asked Questions (FAQ) -->
+    <section class="faq-section">
+      <div class="section-header-center">
+        <span class="section-tag">HELPFUL INFO</span>
+        <h2 class="section-heading">FREQUENTLY ASKED QUESTIONS</h2>
+        <p class="section-subtext">Common queries regarding project timelines, workflows, deliverables, and
+          communication.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-card glass-card">
+          <div class="faq-question">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>What is your typical project turnaround time?</span>
+          </div>
+          <p class="faq-answer">
+            Small landing pages or UI kits take 1 to 2 weeks, while full web application designs and frontend builds
+            take 3 to 5 weeks depending on scope complexity.
+          </p>
+        </div>
+
+        <div class="faq-card glass-card">
+          <div class="faq-question">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>What design & development tools do you use?</span>
+          </div>
+          <p class="faq-answer">
+            For design, I rely on Figma, Adobe XD, Photoshop, and Illustrator. For development, I build with Angular,
+            HTML5/CSS3, Tailwind CSS, and Bootstrap.
+          </p>
+        </div>
+
+        <div class="faq-card glass-card">
+          <div class="faq-question">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Do you provide developer-ready handoff files?</span>
+          </div>
+          <p class="faq-answer">
+            Yes! I provide organized Figma libraries with design tokens, component variants, spacing scales, and
+            responsive code snippets ready for engineering integration.
+          </p>
+        </div>
+
+        <div class="faq-card glass-card">
+          <div class="faq-question">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Are you open to remote global opportunities?</span>
+          </div>
+          <p class="faq-answer">
+            Absolutely. I work seamlessly with international clients and remote teams across various time zones via
+            Slack, Zoom, Jira, and Teams.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="contact" class="contact-section">
+
+      <footer class="site-footer">
+        <div class="footer-container">
+           <div class="connect-let">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="contact-heading">Let's Build Something Meaningful Together</h2>
+          </div>
+          <div class="footer-top-grid">
+            
+            <!-- Column 1: Brand & Bio -->
+            <div class="footer-brand-col">
+              <h3 class="footer-logo">Ravi<span>.Portfolio</span></h3>
+              <p class="footer-tagline">
+                Crafting digital products that inspire, connect, and scale modern businesses.
+              </p>
+            </div>
+
+            <!-- Column 2: Navigation -->
+            <div>
+              <h4 class="footer-heading">NAVIGATION</h4>
+              <ul class="footer-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Social -->
+            <div>
+              <h4 class="footer-heading">SOCIAL</h4>
+              <ul class="footer-links">
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Direct Contact -->
+            <div>
+              <h4 class="footer-heading">DIRECT</h4>
+              <div class="footer-direct-info">
+                <a href="mailto:7055ravikumar@gmail.com" class="footer-email">7055ravikumar@gmail.com</a>
+                <p class="footer-location">Chandigarh, India</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="footer-divider"></div>
+
+          <!-- Bottom Bar -->
+          <div class="footer-bottom-bar">
+            <p class="footer-copyright>© 2026 Ravi Kumar. All rights reserved.</p>
+            <a href="#" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+              Back to top <span class="arrow">↑</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Resume Upload Modal -->
+  <div class="resume-modal-backdrop" id="resumeUploadModal">
+    <div class="resume-modal-card glass-card">
+      <button class="modal-close-btn" onclick="closeResumeUploadModal()">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Upload Resume / CV</h3>
+        <p>Select or drag & drop a resume file (.pdf, .doc, .docx) to update your portfolio CV.</p>
+      </div>
+
+      <div class="upload-drag-zone" id="uploadDragZone">
+        <i class="fa-solid fa-file-pdf upload-zone-icon"></i>
+        <p class="zone-text">Drag & drop your resume file here, or <span class="browse-link">browse file</span></p>
+        <span class="zone-subtext">Supports PDF, DOC, DOCX files up to 10MB</span>
+        <input type="file" id="resumeFileInput" accept=".pdf,.doc,.docx" hidden onchange="handleFileSelect(event)">
+      </div>
+
+      <div class="uploaded-file-preview" id="uploadedFilePreview" style="display:none;">
+        <div class="file-info-badge">
+          <i class="fa-solid fa-file-circle-check"></i>
+          <div>
+            <strong id="previewFileName">Resume.pdf</strong>
+            <span id="previewFileSize">240 KB</span>
+          </div>
+        </div>
+        <button class="btn-remove-file" onclick="resetUploadedResume()" title="Remove file"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+
+      <div class="modal-footer-actions">
+        <button class="modal-btn secondary" onclick="closeResumeUploadModal()">Cancel</button>
+        <button class="modal-btn primary" id="saveResumeBtn" onclick="saveUploadedResume()" disabled>
+          <i class="fa-solid fa-check"></i> Save & Apply Resume
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Pill Options Selection Script
+    document.querySelectorAll('.pills-group').forEach(group => {
+      group.querySelectorAll('.pill-option').forEach(pill => {
+        pill.addEventListener('click', () => {
+          group.querySelectorAll('.pill-option').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

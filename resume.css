@@ -1,0 +1,319 @@
+    .resume-page-container {
+      max-width: 960px;
+      margin: 100px auto 60px;
+      padding: 0 20px;
+    }
+
+    .resume-action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 16px 24px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .resume-action-bar .left-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+    }
+
+    .resume-action-bar .left-info i {
+      font-size: 1.5rem;
+      color: #ff5e36;
+    }
+
+    .resume-btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .r-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .r-btn-primary {
+      background: linear-gradient(135deg, #ff5e36, #e04820);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 15px rgba(255, 94, 54, 0.3);
+    }
+
+    .r-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 94, 54, 0.4);
+    }
+
+    .r-btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .r-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .r-btn-outline {
+      background: transparent;
+      color: #7dd3fc;
+      border: 1px solid #7dd3fc;
+    }
+
+    .r-btn-outline:hover {
+      background: rgba(125, 211, 252, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Print Paper Card styling */
+    .resume-paper {
+      background: rgba(18, 18, 24, 0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 45px;
+      color: #e2e8f0;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .resume-header {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    .resume-name {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .resume-tagline {
+      font-size: 1.1rem;
+      color: #ff5e36;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .resume-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.92rem;
+      color: #94a3b8;
+    }
+
+    .resume-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .resume-section {
+      margin-bottom: 35px;
+    }
+
+    .resume-section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-left: 4px solid #ff5e36;
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+
+    .resume-profile-text {
+      line-height: 1.7;
+      color: #cbd5e1;
+      font-size: 0.98rem;
+    }
+
+    /* Skills Table */
+    .resume-skills-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 12px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .skill-cat {
+      font-weight: 700;
+      color: #ff5e36;
+      font-size: 0.92rem;
+    }
+
+    .skill-val {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    /* Experience Items */
+    .exp-item {
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+
+    .exp-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .exp-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .exp-role-co {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .exp-dates {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0 0;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      color: #cbd5e1;
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
+    .exp-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      color: #ff5e36;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Project List */
+    .proj-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    .proj-card-mini {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    .proj-card-mini h4 {
+      color: #fff;
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+
+    .proj-card-mini p {
+      color: #94a3b8;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #1e293b !important;
+      }
+
+      .navbar,
+      .loader,
+      .resume-action-bar,
+      .footer-bottom {
+        display: none !important;
+      }
+
+      .resume-page-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+
+      .resume-paper {
+        background: #fff !important;
+        color: #1e293b !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 20px !important;
+      }
+
+      .resume-name,
+      .exp-role-co,
+      .resume-section-title,
+      .proj-card-mini h4 {
+        color: #0f172a !important;
+      }
+
+      .resume-section-title {
+        border-left-color: #e04820 !important;
+      }
+
+      .resume-tagline,
+      .skill-cat,
+      .exp-bullets li::before {
+        color: #e04820 !important;
+      }
+
+      .resume-profile-text,
+      .skill-val,
+      .exp-bullets li,
+      .proj-card-mini p,
+      .resume-meta {
+        color: #334155 !important;
+      }
+
+      .resume-skills-grid,
+      .proj-card-mini {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+      }
+    }

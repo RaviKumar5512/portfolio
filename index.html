@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravi Kumar — UI/UX Designer & Web Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Fixed Background Canvas Animation -->
+  <canvas id="animation-canvas"></canvas>
+  <div class="black_color"></div>
+
+  <!-- Preloader Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-text" id="loader-text">Loading 0%</div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill" id="loader-fill"></div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar">
+    <a href="index.html#home" class="logo">Ravi<span>.Portfolio</span></a>
+    <nav class="nav-links">
+      <a href="index.html#home" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="project.html">Projects</a>
+      <!-- <a href="resume.html">Resume</a> -->
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right-actions">
+      <!-- <button onclick="downloadResume()" class="btn-resume-nav"><i class="fa-solid fa-download"></i> Resume</button> -->
+      <a href="contact.html" class="btn-touch">Get in touch <span class="arrow"><i
+            class="bi bi-arrow-right"></i></span></a>
+    </div>
+  </header>
+
+  <!-- Content Layer Pinned/Scrolled Over Canvas Animation -->
+  <main class="content-wrapper">
+
+    <!-- Section 1: Hero Section (Folioblox Style) -->
+    <section id="home" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="hero-subtitle">Hey, I'm</span>
+          <h1 class="hero-title">Ravi Kumar</h1>
+          <h2 class="hero-role">UI / UX Designer & Web Designer</h2>
+
+          <div class="hero-tags">
+            <div class="tag-item">
+              <span class="tag-num">#01</span>
+              <span class="tag-text">UI/UX Design</span>
+            </div>
+            <div class="tag-item">
+              <span class="tag-num">#02</span>
+              <span class="tag-text">Web Designer</span>
+            </div>
+            <div class="tag-item">
+              <span class="tag-num">#03</span>
+              <span class="tag-text">Design Systems</span>
+            </div>
+            <div class="tag-item">
+              <span class="tag-num">#04</span>
+              <span class="tag-text">Mobile-First Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <blockquote class="hero-quote">
+            "I care about why a decision is right, not just that it's on-brand."
+          </blockquote>
+          <p class="hero-desc">
+            UI/UX Designer with 3+ years turning ambiguous product requirements into validated user flows, information
+            architecture, and clean, systemized interfaces — partnering with engineering to ship them without losing
+            intent in handoff.
+          </p>
+
+          <div class="hero-resume-actions">
+            <!-- <button onclick="downloadResume()" class="r-hero-btn primary">
+              <i class="fa-solid fa-download"></i> Download Resume
+            </button> -->
+            <a href="resume.html" class="r-hero-btn secondary">
+              <i class="fa-solid fa-eye"></i> View Resume
+            </a>
+            <!-- <button onclick="openResumeUploadModal()" class="r-hero-btn outline">
+              <i class="fa-solid fa-upload"></i> Upload CV
+            </button> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Core Tools & Stack Strip -->
+    <section class="tools-strip-section">
+      <div class="tools-strip glass-card">
+        <span class="strip-title">Core Stack & Tools</span>
+        <div class="strip-items">
+          <div class="tool-chip">Figma</div>
+          <div class="tool-chip">Angular</div>
+          <div class="tool-chip">HTML5 / CSS3</div>
+          <div class="tool-chip">Tailwind CSS</div>
+          <div class="tool-chip">Bootstrap</div>
+          <div class="tool-chip">Adobe XD</div>
+          <div class="tool-chip">AI Assisted Dev</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section 1: Key Statistics & Metrics -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-num">03+</span>
+          <span class="stat-title">YEARS EXPERIENCE</span>
+          <p class="stat-desc">Building responsive web apps & design systems for startup clients.</p>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">25+</span>
+          <span class="stat-title">PROJECTS DELIVERED</span>
+          <p class="stat-desc">Successful UI/UX screens & platforms across HR-tech & job portals.</p>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">100%</span>
+          <span class="stat-title">CLIENT SATISFACTION</span>
+          <p class="stat-desc">High focus on usability, accessibility, and intuitive user flows.</p>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">12+</span>
+          <span class="stat-title">DESIGN KITS</span>
+          <p class="stat-desc">Scalable Figma design tokens, component libraries & UI kits created.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: About & Behind the Experience -->
+    <section id="about" class="about-section">
+      <div class="about-grid">
+        <div class="about-left">
+          <span class="section-tag">Behind the Designs</span>
+          <h2 class="section-heading">Shaping Experiences That Make Life Simpler</h2>
+        </div>
+        <div class="about-right">
+          <p class="about-para">
+            I'm a UI/UX designer and Web Designer focused on building clean, intuitive interfaces that solve real-world
+            problems. Experienced in building user-focused interfaces, improving usability, and delivering mobile-first
+            designs.
+          </p>
+          <a href="#contact" class="btn-touch inline-btn">Get in touch <span class="arrow"><i
+                class="bi bi-arrow-right"></i></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section 2: Big Person Name Banner with Centered Image -->
+    <section class="person-name-section">
+      <div class="person-name-container">
+        <h1 class="big-name-top">RAVI</h1>
+        <div class="person-center-photo">
+          <img src="images/ravi.png" alt="Ravi Kumar - UI/UX Designer & Web Designer">
+        </div>
+        <h1 class="big-name-bottom">KUMAR</h1>
+      </div>
+      <p class="person-caption">UI / UX DESIGNER & WEB DESIGNER</p>
+    </section>
+
+    <section id="experience" class="experience-section">
+      <div class="exp-deck-header">
+        <h2 class="deck-main-heading">
+          EXPERIENCE, CREATIVITY, GROWTH
+          <span class="deck-sub-heading">MY PROFESSIONAL JOURNEY.</span>
+        </h2>
+      </div>
+
+      <div class="experience-deck-container">
+        <!-- Card 1: Freelancer (Orange) -->
+        <div class="exp-deck-card card-orange active" data-index="0">
+          <div class="exp-card-content">
+            <div class="exp-card-header">
+              <span class="exp-card-date">JUNE 2025 - PRESENT</span>
+              <h3 class="exp-card-title">FREELANCE SELF EMPLOYED</h3>
+              <p class="exp-card-role">UI/UX Designer & Web Designer</p>
+            </div>
+            <div class="exp-card-body">
+              <p class="exp-card-desc">
+                Owned the full product design lifecycle — research, user flows, wireframes, high-fidelity UI, and
+                front-end build — for restaurant, job-portal, and business-platform clients.
+              </p>
+              <ul class="exp-card-bullets">
+                <li>Reduced client revision cycles by running structured user research & stakeholder discovery upfront.
+                </li>
+                <li>Cut new-screen design-to-build time by creating unified component systems in Figma & code
+                  simultaneously (Bootstrap, HTML5, CSS3, Tailwind CSS).</li>
+                <li>Improved usability through lightweight concept validation and usability testing, feeding findings
+                  directly into front-end build.</li>
+                <li>Built & shipped production front-end code (Angular, Base JavaScript, HTML5, CSS3, Bootstrap,
+                  Tailwind CSS).</li>
+              </ul>
+              <div class="exp-card-tags">
+                <span>Full Product Design</span>
+                <span>Figma & Code</span>
+                <span>Tailwind CSS</span>
+                <span>Angular</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Absolve Innovation (White) -->
+        <div class="exp-deck-card card-white" data-index="1">
+          <div class="exp-card-content">
+            <div class="exp-card-header">
+              <span class="exp-card-date">SEP 2024 - MAR 2025</span>
+              <h3 class="exp-card-title">ABSOLVE INNOVATION</h3>
+              <p class="exp-card-role">UI/UX Designer & Web Designer (Freelance)</p>
+            </div>
+            <div class="exp-card-body">
+              <p class="exp-card-desc">
+                Designed & helped build interfaces for HR-tech and IT-services platforms, translating requirements
+                into user flows & wireframes.
+              </p>
+              <ul class="exp-card-bullets">
+                <li>Shortened design-to-dev handoff time by working directly with Product Owners and engineering to
+                  match code constraints.</li>
+                <li>Increased cross-platform design consistency by building shared UI component systems (Figma, Angular,
+                  Bootstrap, HTML5, CSS3, Tailwind CSS).</li>
+                <li>Reduced post-launch usability issues by applying mobile-first, responsive, and accessibility
+                  principles.</li>
+                <li>Contributed directly to front-end implementation (Angular, Base JavaScript, HTML5, CSS3, Bootstrap),
+                  closing design-to-production gap.</li>
+              </ul>
+              <div class="exp-card-tags">
+                <span>HR-Tech</span>
+                <span>IT Services</span>
+                <span>Component Systems</span>
+                <span>Accessibility</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: TueSpot Solutions (Dark Gray) -->
+        <div class="exp-deck-card card-dark" data-index="2">
+          <div class="exp-card-content">
+            <div class="exp-card-header">
+              <span class="exp-card-date">DEC 2022 - JULY 2024</span>
+              <h3 class="exp-card-title">TUESPOT SOLUTIONS</h3>
+              <p class="exp-card-role">UI/UX Designer & Web Designer</p>
+            </div>
+            <div class="exp-card-body">
+              <p class="exp-card-desc">
+                Designed responsive web & mobile interfaces — user flows, wireframes, prototypes, high-fidelity UI —
+                and contributed to front-end builds. </p>
+              <ul class="exp-card-bullets">
+                <li>Decreased rebuild time on new client projects by establishing reusable UI component systems backed
+                  by documented design system & IA standards.</li>
+                <li>Improved requirement-to-design accuracy through close collaboration with Product Owners and
+                  stakeholders.</li>
+                <li>Identified & resolved design-to-development inconsistencies pre-launch by running regular design QA
+                  directly against codebase.</li>
+                <li>Contributed to front-end implementation (Angular, Bootstrap, HTML5, CSS3, Base JavaScript), ensuring
+                  shipped UI matched approved designs.</li>
+              </ul>
+              <div class="exp-card-tags">
+                <span>Responsive Web & Mobile</span>
+                <span>Design QA</span>
+                <span>IA Standards</span>
+                <span>Angular</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Omninos Technologies (Black with Metallic 3D Ring visual) -->
+        <div class="exp-deck-card card-black" data-index="3">
+          <div class="card-metallic-ring">
+            <svg width="68" height="68" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="chromeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFFFFF" />
+                  <stop offset="30%" stop-color="#A0A0A5" />
+                  <stop offset="55%" stop-color="#FFFFFF" />
+                  <stop offset="75%" stop-color="#404045" />
+                  <stop offset="100%" stop-color="#D0D0D5" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="50" cy="50" rx="36" ry="18" transform="rotate(-30 50 50)" stroke="url(#chromeGradient)"
+                stroke-width="12" fill="none" />
+              <ellipse cx="50" cy="50" rx="36" ry="18" transform="rotate(-30 50 50)" stroke="#FFFFFF" stroke-width="2"
+                fill="none" opacity="0.6" />
+            </svg>
+          </div>
+          <div class="exp-card-content">
+            <div class="exp-card-header">
+              <span class="exp-card-date">MAY 2022 - NOV 2022</span>
+              <h3 class="exp-card-title">OMNINOS TECHNOLOGIES</h3>
+              <p class="exp-card-role">Web Designer Intern</p>
+            </div>
+            <div class="exp-card-body">
+              <p class="exp-card-desc">
+                Designed & helped implement responsive website layouts and UI components (HTML, CSS, Bootstrap,
+                WordPress) under senior designers. </p>
+              <ul class="exp-card-bullets">
+                <li>Built foundational skills in usability, accessibility, and responsive design, learning to justify
+                  decisions through user & business requirements.</li>
+                <li>Collaborated with senior designers to refine layouts and improve consistency across screen sizes.
+                </li>
+              </ul>
+              <div class="exp-card-tags">
+                <span>UI Components</span>
+                <span>WordPress</span>
+                <span>Accessibility</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Selected Projects Grid -->
+
+    <section id="projects" class="projects-section">
+      <div class="section-title">
+        <span>
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-heading">Selected Projects</h2>
+        </span>
+        <span>
+          <a href="project.html"> View More</a>
+        </span>
+      </div>
+
+      <div class="project-filter">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="uiux">Web Design</button>
+        <button data-filter="appdesign">App Design</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
+
+    </section>
+
+    
+    <!-- Section 6: Education & Core Skills -->
+    <section class="skills-edu-section">
+      <div class="skills-edu-grid">
+        <div class="skills-col">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-heading">Core Skills</h2>
+
+          <div class="skill-category glass-card">
+            <h4>UI/UX Design</h4>
+            <p>Wireframing, Prototyping, User Flows, Responsive Design, Design Systems, Usability Testing</p>
+          </div>
+
+          <div class="skill-category glass-card">
+            <h4>Web Designer</h4>
+            <p>Angular, Bootstrap, HTML5, CSS3, SASS, Tailwind CSS</p>
+          </div>
+
+          <div class="skill-category glass-card">
+            <h4>Design & AI Tools</h4>
+            <p>Figma, Adobe XD, Photoshop, Illustrator, ChatGPT, Claude AI, GitHub Copilot</p>
+          </div>
+        </div>
+
+        <div class="edu-col">
+          <span class="section-tag">Academic</span>
+          <h2 class="section-heading">Education</h2>
+
+          <div class="edu-card glass-card">
+            <h3 class="edu-degree">MSc (Information Technology)</h3>
+            <span class="edu-school">HNBGU</span>
+            <span class="edu-year">2019 – 2021</span>
+          </div>
+
+          <div class="edu-card glass-card">
+            <h3 class="edu-degree">BSc (Information Technology)</h3>
+            <span class="edu-school">HNBGU</span>
+            <span class="edu-year">2016 – 2019</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow Plan Section (Direct on Canvas Background) -->
+    <section class="workflow-plan-section">
+      <div class="workflow-plan-container">
+
+        <!-- Header Grid -->
+        <div class="workflow-header-grid">
+          <div class="workflow-header-left">
+            <div class="section-tag-dot">
+              <span class="pulse-dot"></span> WORKFLOW PLAN
+            </div>
+            <h2 class="workflow-headline">
+              A focused <em>two-week</em> design sprint from idea to visual concept.
+            </h2>
+          </div>
+
+          <div class="workflow-header-right">
+            <p class="workflow-intro-desc">
+              This concept was developed as a focused two-week design sprint — from product positioning and visual
+              research to landing page structure, interface mockups and final Behance presentation. The process combined
+              AI-assisted exploration with hands-on art direction, layout design and visual refinement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stepper Timeline Diagram -->
+        <div class="workflow-timeline-diagram">
+          <div class="timeline-nodes-wrapper">
+
+            <div class="timeline-step-node step-1">
+              <div class="node-chip">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Research & references</span>
+                <span class="days-badge">1 day</span>
+              </div>
+            </div>
+
+            <div class="timeline-step-node step-2">
+              <div class="node-chip">
+                <i class="fa-solid fa-bullseye"></i>
+                <span>Product positioning</span>
+                <span class="days-badge">1 day</span>
+              </div>
+            </div>
+
+            <div class="timeline-step-node step-3">
+              <div class="node-chip">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Landing page structure</span>
+                <span class="days-badge">1 day</span>
+              </div>
+            </div>
+
+            <div class="timeline-step-node step-4">
+              <div class="node-chip">
+                <i class="fa-solid fa-palette"></i>
+                <span>Visual direction</span>
+                <span class="days-badge">2 days</span>
+              </div>
+            </div>
+
+            <div class="timeline-step-node step-5">
+              <div class="node-chip">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>AI concept exploration</span>
+                <span class="days-badge">2 days</span>
+              </div>
+            </div>
+
+            <div class="timeline-step-node step-6">
+              <div class="node-chip">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>UI design</span>
+                <span class="days-badge">3 days</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Note -->
+        <div class="workflow-bottom-note">
+          <span class="note-dot"></span>
+          <p>A structured two-week workflow helped turn an AI SaaS idea into a polished landing page concept with a
+            clear narrative, premium visual language and detailed interface presentation.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Color Palette Section (Direct on Canvas Background) -->
+    <section class="color-palette-section">
+      <div class="color-palette-container">
+
+        <div class="color-palette-header">
+          <div class="section-tag-dot">
+            <span class="pulse-dot"></span> COLOR PALETTE
+          </div>
+          <h2 class="palette-headline">
+            The palette supports focus, premium feel and the idea of an intelligent AI-powered workspace.
+          </h2>
+        </div>
+
+        <!-- Interactive Color Token Cards Display -->
+        <div class="color-nodes-display">
+
+          <div class="palette-center-ring">
+            <div class="ring-node node-white"></div>
+            <div class="ring-node node-orange"></div>
+            <div class="ring-node node-dark"></div>
+            <div class="ring-node node-deep"></div>
+          </div>
+
+          <div class="color-cards-grid">
+
+            <div class="color-token-card accent-card">
+              <div class="color-card-top">
+                <span class="color-title">Primary Accent</span>
+                <span class="color-close">&times;</span>
+              </div>
+              <p class="color-usage">Vibrant orange accent used for call-to-actions, focus states, and key interactive
+                elements.</p>
+              <div class="color-meta-row">
+                <div class="meta-item">
+                  <span class="meta-label">HEX</span>
+                  <strong class="meta-val">#FF5E36</strong>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">RGB</span>
+                  <strong class="meta-val">255 94 54</strong>
+                </div>
+                <span class="meta-pct">100%</span>
+              </div>
+            </div>
+
+            <div class="color-token-card">
+              <div class="color-card-top">
+                <span class="color-title">Soft White</span>
+                <span class="color-close">&times;</span>
+              </div>
+              <p class="color-usage">Used for text and accents, keeping the interface clean, readable and balanced.</p>
+              <div class="color-meta-row">
+                <div class="meta-item">
+                  <span class="meta-label">HEX</span>
+                  <strong class="meta-val">#FFFFFF</strong>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">RGB</span>
+                  <strong class="meta-val">255 255 255</strong>
+                </div>
+                <span class="meta-pct">100%</span>
+              </div>
+            </div>
+
+            <div class="color-token-card">
+              <div class="color-card-top">
+                <span class="color-title">Dark Accent</span>
+                <span class="color-close">&times;</span>
+              </div>
+              <p class="color-usage">Used for cards, panels and UI elements to support the layered glassmorphic effect.
+              </p>
+              <div class="color-meta-row">
+                <div class="meta-item">
+                  <span class="meta-label">HEX</span>
+                  <strong class="meta-val">#121218a8</strong>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">RGB</span>
+                  <strong class="meta-val">18 18 24</strong>
+                </div>
+                <span class="meta-pct">100%</span>
+              </div>
+            </div>
+
+            <div class="color-token-card">
+              <div class="color-card-top">
+                <span class="color-title">Deep Background</span>
+                <span class="color-close">&times;</span>
+              </div>
+              <p class="color-usage">Used as the main base color for deep atmosphere and a premium dark mode experience.
+              </p>
+              <div class="color-meta-row">
+                <div class="meta-item">
+                  <span class="meta-label">HEX</span>
+                  <strong class="meta-val">#cdc7d7</strong>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">RGB</span>
+                  <strong class="meta-val">13 14 23</strong>
+                </div>
+                <span class="meta-pct">100%</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section 7: Contact / Footer -->
+    <section id="contact" class="contact-section">
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="connect-let">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="contact-heading">Let's Build Something Meaningful Together</h2>
+          </div>
+          <div class="footer-top-grid">
+
+            <!-- Column 1: Brand & Bio -->
+            <div class="footer-brand-col">
+              <h3 class="footer-logo">Ravi<span>.Portfolio</span></h3>
+              <p class="footer-tagline">
+                Crafting digital products that inspire, connect, and scale modern businesses.
+              </p>
+            </div>
+
+            <!-- Column 2: Navigation -->
+            <div>
+              <h4 class="footer-heading">NAVIGATION</h4>
+              <ul class="footer-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Social -->
+            <div>
+              <h4 class="footer-heading">SOCIAL</h4>
+              <ul class="footer-links">
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+                <!-- <li><a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a></li>
+                <li><a href="https://behance.net" target="_blank" rel="noopener">Behance</a></li> -->
+              </ul>
+            </div>
+
+            <!-- Column 4: Direct Contact -->
+            <div>
+              <h4 class="footer-heading">DIRECT</h4>
+              <div class="footer-direct-info">
+                <a href="mailto:7055ravikumar@gmail.com" class="footer-email">7055ravikumar@gmail.com</a>
+                <a href="tel:7055522514" class="footer-email">+91 7055522514</a>
+                <p class="footer-location">Chandigarh ITBP Behalana, India</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="footer-divider"></div>
+
+          <!-- Bottom Bar -->
+          <div class="footer-bottom-bar">
+            <p class="footer-copyright>© 2026 Ravi Kumar. All rights reserved.</p>
+            <a href=" #" class="footer-back-to-top"
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+              Back to top <span class="arrow">↑</span>
+              </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Resume Upload Modal -->
+  <!-- <div class="resume-modal-backdrop" id="resumeUploadModal">
+    <div class="resume-modal-card glass-card">
+      <button class="modal-close-btn" onclick="closeResumeUploadModal()">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Upload Resume / CV</h3>
+        <p>Select or drag & drop a resume file (.pdf, .doc, .docx) to update your portfolio CV.</p>
+      </div>
+
+      <div class="upload-drag-zone" id="uploadDragZone">
+        <i class="fa-solid fa-file-pdf upload-zone-icon"></i>
+        <p class="zone-text">Drag & drop your resume file here, or <span class="browse-link">browse file</span></p>
+        <span class="zone-subtext">Supports PDF, DOC, DOCX files up to 10MB</span>
+        <input type="file" id="resumeFileInput" accept=".pdf,.doc,.docx" hidden onchange="handleFileSelect(event)">
+      </div>
+
+      <div class="uploaded-file-preview" id="uploadedFilePreview" style="display:none;">
+        <div class="file-info-badge">
+          <i class="fa-solid fa-file-circle-check"></i>
+          <div>
+            <strong id="previewFileName">Resume.pdf</strong>
+            <span id="previewFileSize">240 KB</span>
+          </div>
+        </div>
+        <button class="btn-remove-file" onclick="resetUploadedResume()" title="Remove file"><i
+            class="fa-solid fa-trash-can"></i></button>
+      </div>
+
+      <div class="modal-footer-actions">
+        <button class="modal-btn secondary" onclick="closeResumeUploadModal()">Cancel</button>
+        <button class="modal-btn primary" id="saveResumeBtn" onclick="saveUploadedResume()" disabled>
+          <i class="fa-solid fa-check"></i> Save & Apply Resume
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

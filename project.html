@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selected Projects — Ravi Kumar UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <!-- Preloader Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-text" id="loader-text">Loading 0%</div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill" id="loader-fill"></div>
+    </div>
+  </div>
+
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar">
+    <a href="index.html#home" class="logo">Ravi<span>.Portfolio</span></a>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="project.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn-touch">Get in touch <span class="arrow"><i
+          class="bi bi-arrow-right"></i></span></a>
+  </header>
+
+  <!-- Content Wrapper -->
+  <main class="content-wrapper">
+
+    <!-- Section 1: Page Hero Title & Subtext -->
+    <section class="project-hero-section">
+      <div class="project-hero-content">
+        <span class="section-tag">PORTFOLIO SHOWCASE</span>
+        <h1 class="project-hero-title">SELECTED PROJECTS & CASE STUDIES</h1>
+        <p class="project-hero-subtext">
+          A curated collection of e-commerce platforms, luxury fashion lookbooks, corporate web portals, agency branding
+          systems, and mobile applications crafted for startups and business clients.
+        </p>
+        <div class="project-stats-strip glass-card">
+          <div class="p-stat">
+            <span class="p-num">20+</span>
+            <span class="p-label">Curated Projects</span>
+          </div>
+          <div class="p-stat">
+            <span class="p-num">05</span>
+            <span class="p-label">Specialized Categories</span>
+          </div>
+          <div class="p-stat">
+            <span class="p-num">100%</span>
+            <span class="p-label">Responsive & Shipped</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Interactive Filterable Projects Grid -->
+    <section id="projects" class="projects-section">
+      <div class="section-title">
+        <div>
+          <span class="section-tag">PORTFOLIO EXPLORER</span>
+          <h2 class="section-heading">Explore Portfolio Works</h2>
+        </div>
+      </div>
+
+      <div class="project-filter">
+        <button class="active" data-filter="all">All Works</button>
+        <button data-filter="ecommerce"><i class="fa-solid fa-cart-shopping"></i> E-Commerce</button>
+        <button data-filter="fashion"><i class="fa-solid fa-gem"></i> Fashion & Luxury</button>
+        <button data-filter="agency"><i class="fa-solid fa-bullhorn"></i> Creative & Agency</button>
+        <button data-filter="corporate"><i class="fa-solid fa-building"></i> Corporate & Enterprise</button>
+        <button data-filter="appdesign"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Apps</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- Section 3: Design Process & Methodology -->
+    <section class="process-section">
+      <div class="process-header text-center">
+        <span class="section-tag">HOW I WORK</span>
+        <h2 class="section-heading">DESIGN PROCESS & METHODOLOGY</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Discovery & Research</h3>
+          <p class="step-desc">Analyzing project requirements, target audience, and business goals to map out intuitive
+            user flows and wireframes.</p>
+        </div>
+
+        <div class="process-card">
+          <span class="step-num">02</span>
+          <h3 class="step-title">Wireframing & Prototyping</h3>
+          <p class="step-desc">Creating low and high-fidelity interactive Figma prototypes to iterate rapidly and
+            validate usability before development.</p>
+        </div>
+
+        <div class="process-card">
+          <span class="step-num">03</span>
+          <h3 class="step-title">Visual UI & Design Systems</h3>
+          <p class="step-desc">Crafting modern color palettes, typography scales, design tokens, and reusable component
+            libraries for consistent UI.</p>
+        </div>
+
+        <div class="process-card">
+          <span class="step-num">04</span>
+          <h3 class="step-title">Frontend Handoff & Launch</h3>
+          <p class="step-desc">Translating pixel-perfect designs into clean, responsive Angular, HTML5, CSS3, Bootstrap,
+            and Tailwind CSS code.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Project Impact & Key Results -->
+    <section class="impact-section">
+      <div class="impact-grid">
+        <div class="impact-left">
+          <span class="section-tag">PROJECT OUTCOMES</span>
+          <h2 class="section-heading">Delivering Measurable Product Value</h2>
+          <p class="impact-para">
+            Every project is engineered with precision—focusing on clean hierarchy, fast load times, and effortless user
+            navigation across desktop and mobile browsers.
+          </p>
+        </div>
+        <div class="impact-right">
+          <div class="impact-stat-card">
+            <span class="impact-num">40%</span>
+            <div class="impact-text">
+              <h4>Faster Handoff</h4>
+              <p>Scalable design systems accelerate frontend developer workflow.</p>
+            </div>
+          </div>
+
+          <div class="impact-stat-card">
+            <span class="impact-num">99%</span>
+            <div class="impact-text">
+              <h4>Responsive Precision</h4>
+              <p>Tested across mobile, tablet, and widescreen viewports.</p>
+            </div>
+          </div>
+
+          <div class="impact-stat-card">
+            <span class="impact-num">100+</span>
+            <div class="impact-text">
+              <h4>UI Screens Delivered</h4>
+              <p>High-fidelity UI screens built for startups & enterprises.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Contact & Footer -->
+    <section id="contact" class="contact-section">
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="connect-let">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="contact-heading">Have a Project in Mind? Let's Build Together</h2>
+          </div>
+          <div class="footer-top-grid">
+
+            <!-- Column 1: Brand & Bio -->
+            <div class="footer-brand-col">
+              <h3 class="footer-logo">Ravi<span>.Portfolio</span></h3>
+              <p class="footer-tagline">
+                Crafting digital products that inspire, connect, and scale modern businesses.
+              </p>
+            </div>
+
+            <!-- Column 2: Navigation -->
+            <div>
+              <h4 class="footer-heading">NAVIGATION</h4>
+              <ul class="footer-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Social -->
+            <div>
+              <h4 class="footer-heading">SOCIAL</h4>
+              <ul class="footer-links">
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Direct Contact -->
+            <div>
+              <h4 class="footer-heading">DIRECT</h4>
+              <div class="footer-direct-info">
+                <a href="mailto:7055ravikumar@gmail.com" class="footer-email">7055ravikumar@gmail.com</a>
+                <p class="footer-location">Chandigarh, India</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="footer-divider"></div>
+
+          <!-- Bottom Bar -->
+          <div class="footer-bottom-bar">
+            <p class="footer-copyright>© 2026 Ravi Kumar. All rights reserved.</p>
+            <a href=" #" class="footer-back-to-top"
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+              Back to top <span class="arrow">↑</span>
+              </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="project.js"></script>
+</body>
+
+</html>
