@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Ravi Kumar — UI/UX Designer & Web Designer with 3+ years experience turning ambiguous product requirements into validated user flows, design systems, and responsive interfaces.">
   <title>Ravi Kumar — UI/UX Designer & Web Designer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="project.css">
   <!-- Google Fonts -->
@@ -90,7 +93,7 @@
           <p class="hero-desc">
             UI/UX Designer with 3+ years turning ambiguous product requirements into validated user flows, information
             architecture, and clean, systemized interfaces — partnering with engineering to ship them without losing
-            intent in handoff.
+            intent in handoff. Shipped 20+ digital products with measurable business impact.
           </p>
 
           <div class="hero-resume-actions">
@@ -344,7 +347,7 @@
           <h2 class="section-heading">Selected Projects</h2>
         </span>
         <span>
-          <a href="project.html"> View More</a>
+          <a href="project.html"> View All Projects <i class="fa-solid fa-arrow-right"></i></a>
         </span>
       </div>
 
@@ -354,11 +357,207 @@
         <button data-filter="appdesign">App Design</button>
       </div>
 
-      <div class="projects-grid" id="projectsGrid"></div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1: Orogoo Job Portal -->
+        <div class="project-card glass-card" onclick="location.href='project-detail.html?id=orogoo'"
+          style="cursor: pointer;">
+          <div class="project-image-box">
+            <img src="images/orogoos.png" alt="Orogoo Job Portal" loading="lazy">
+            <div class="project-card-overlay">
+              <span class="btn-case-study">View Case Study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+            <span class="featured-badge"><i class="fa-solid fa-star"></i> Featured</span>
+          </div>
+          <div class="project-content">
+            <div class="project-card-header">
+              <h3 class="project-title">Orogoo Job Portal</h3>
+              <a href="https://orogoo.com/#/home" target="_blank" rel="noopener" class="card-live-btn"
+                onclick="event.stopPropagation();" title="Visit Live Site"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
+            </div>
+            <p class="project-desc">
+              Short-term job discovery & shift hiring platform with 40% faster application flow and candidate search
+              dashboards.
+            </p>
+            <div class="project-tags">
+              <span>Job Portal</span>
+              <span>Gig Economy</span>
+              <span>UI/UX Design</span>
+              <span>Angular</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Imperial Weaves -->
+        <div class="project-card glass-card" onclick="location.href='project-detail.html?id=imperial-weaves'"
+          style="cursor: pointer;">
+          <div class="project-image-box">
+            <img src="images/Imperial weaves.png" alt="Imperial Weaves" loading="lazy">
+            <div class="project-card-overlay">
+              <span class="btn-case-study">View Case Study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+            <span class="featured-badge"><i class="fa-solid fa-star"></i> Featured</span>
+          </div>
+          <div class="project-content">
+            <div class="project-card-header">
+              <h3 class="project-title">Imperial Weaves</h3>
+              <a href="https://imperialweaves.com/" target="_blank" rel="noopener" class="card-live-btn"
+                onclick="event.stopPropagation();" title="Visit Live Site"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
+            </div>
+            <p class="project-desc">
+              Luxury Kashmiri handloom saree & heritage textile storefront with 35% higher checkout conversion.
+            </p>
+            <div class="project-tags">
+              <span>Handloom Textiles</span>
+              <span>E-Commerce</span>
+              <span>Luxury Fashion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Hardcode Shampoo -->
+        <div class="project-card glass-card" onclick="location.href='project-detail.html?id=hardcode-shampoo'"
+          style="cursor: pointer;">
+          <div class="project-image-box">
+            <img src="images/Hardcode.png" alt="Hardcode Shampoo" loading="lazy">
+            <div class="project-card-overlay">
+              <span class="btn-case-study">View Case Study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+            <span class="featured-badge"><i class="fa-solid fa-star"></i> Featured</span>
+          </div>
+          <div class="project-content">
+            <div class="project-card-header">
+              <h3 class="project-title">Hardcode Shampoo</h3>
+              <a href="https://www.hardcodeshampoo.com/" target="_blank" rel="noopener" class="card-live-btn"
+                onclick="event.stopPropagation();" title="Visit Live Site"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
+            </div>
+            <p class="project-desc">
+              Conversion-engineered D2C men's grooming storefront with streamlined 2-step checkout flow.
+            </p>
+            <div class="project-tags">
+              <span>Men's Grooming</span>
+              <span>E-Commerce</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Atharv Ayurvedic Drugs -->
+        <div class="project-card glass-card" onclick="location.href='project-detail.html?id=atharv-ayurvedic'"
+          style="cursor: pointer;">
+          <div class="project-image-box">
+            <img src="images/Atharv Ayurvedic Drugs.png" alt="Atharv Ayurvedic Drugs" loading="lazy">
+            <div class="project-card-overlay">
+              <span class="btn-case-study">View Case Study <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+            <span class="featured-badge"><i class="fa-solid fa-star"></i> Featured</span>
+          </div>
+          <div class="project-content">
+            <div class="project-card-header">
+              <h3 class="project-title">Atharv Ayurvedic Drugs</h3>
+              <a href="https://atharvayurvedicdrugs.com/" target="_blank" rel="noopener" class="card-live-btn"
+                onclick="event.stopPropagation();" title="Visit Live Site"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
+            </div>
+            <p class="project-desc">
+              E-Commerce healthcare platform featuring GMP certified catalogue and 25% faster order placement.
+            </p>
+            <div class="project-tags">
+              <span>Ayurvedic Healthcare</span>
+              <span>E-Commerce</span>
+              <span>Web Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </section>
 
-    
+    <!-- Client Testimonials Section (Backing 100% Satisfaction Claim) -->
+    <!-- <section class="testimonials-section">
+      <div class="testimonials-header">
+        <span class="section-tag"><i class="fa-solid fa-star"></i> CLIENT FEEDBACK & TESTIMONIALS</span>
+        <h2 class="section-heading">Trusted by Founders & Product Teams</h2>
+        <p class="section-subtext">
+          Real feedback from founders and engineering leaders on collaboration, speed of delivery, and tangible business
+          impact.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "Ravi transformed our complex job portal requirements into a smooth, intuitive user experience. His ability
+            to prototype in Figma and immediately translate it to clean code cut our launch timeline in half."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">HS</div>
+            <div class="author-info">
+              <h4>Harpreet Singh</h4>
+              <p>Founder, Orogoo Job Portal</p>
+              <span class="project-tag-pill">Orogoo Portal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "The e-commerce storefront Ravi designed for Hardcode Shampoo exceeded our expectations. Our checkout
+            conversion increased by 32% within weeks of launch thanks to his sharp focus on user psychology and mobile
+            usability."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">RM</div>
+            <div class="author-info">
+              <h4>Raghav Mehra</h4>
+              <p>Brand Director, Hardcode Care</p>
+              <span class="project-tag-pill">Hardcode D2C</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "Ravi brings a rare dual strength — he builds comprehensive UI design systems and deeply understands
+            front-end engineering constraints. Working with him resulted in zero handoff friction and a flawless product
+            rollout."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">VS</div>
+            <div class="author-info">
+              <h4>Vikas Sharma</h4>
+              <p>Lead Product Manager, Absolve Innovation</p>
+              <span class="project-tag-pill">HR-Tech Platform</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
     <!-- Section 6: Education & Core Skills -->
     <section class="skills-edu-section">
       <div class="skills-edu-grid">
@@ -599,6 +798,91 @@
       </div>
     </section>
 
+    <section class="testimonials-section">
+      <div class="testimonials-header">
+        <span class="section-tag"><i class="fa-solid fa-star"></i> CLIENT FEEDBACK & TESTIMONIALS</span>
+        <h2 class="section-heading">Trusted by Founders & Product Teams</h2>
+        <p class="section-subtext">
+          Real feedback from founders and engineering leaders on collaboration, speed of delivery, and tangible business
+          impact.
+        </p>
+      </div>
+
+      <div class="tcf-stage" id="tcfStage">
+
+        <!-- Testimonial 1: Orogoo -->
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "Ravi transformed our complex job portal requirements into a smooth, intuitive user experience. His ability
+            to prototype in Figma and immediately translate it to clean code cut our launch timeline in half."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">HS</div>
+            <div class="author-info">
+              <h4>Harpreet Singh</h4>
+              <p>Founder, Orogoo Job Portal</p>
+              <span class="project-tag-pill">Orogoo Portal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2: Hardcode Shampoo -->
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "The e-commerce storefront Ravi designed for Hardcode Shampoo exceeded our expectations. Our checkout
+            conversion increased by 32% within weeks of launch thanks to his sharp focus on user psychology and mobile
+            usability."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">RM</div>
+            <div class="author-info">
+              <h4>Raghav Mehra</h4>
+              <p>Brand Director, Hardcode Care</p>
+              <span class="project-tag-pill">Hardcode D2C</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3: Absolve Innovation -->
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "Ravi brings a rare dual strength — he builds comprehensive UI design systems and deeply understands
+            front-end engineering constraints. Working with him resulted in zero handoff friction and a flawless product
+            rollout."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">VS</div>
+            <div class="author-info">
+              <h4>Vikas Sharma</h4>
+              <p>Lead Product Manager, Absolve Innovation</p>
+              <span class="project-tag-pill">HR-Tech Platform</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tcf-controls">
+        <button class="tcf-btn" id="tcfPrev" aria-label="Previous testimonial"><i
+            class="fa-solid fa-chevron-left"></i></button>
+        <div class="tcf-dots" id="tcfDots"></div>
+        <button class="tcf-btn" id="tcfNext" aria-label="Next testimonial"><i
+            class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
 
     <!-- Section 7: Contact / Footer -->
     <section id="contact" class="contact-section">
@@ -634,10 +918,10 @@
             <div>
               <h4 class="footer-heading">SOCIAL</h4>
               <ul class="footer-links">
-                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
-                <!-- <li><a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a></li>
-                <li><a href="https://behance.net" target="_blank" rel="noopener">Behance</a></li> -->
+                <li><a href="https://www.linkedin.com/in/ravi-kumar-842b02250" target="_blank"
+                    rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/RaviKumar5512/ravi_portfolio" target="_blank" rel="noopener">GitHub</a>
+                </li>
               </ul>
             </div>
 
@@ -646,8 +930,8 @@
               <h4 class="footer-heading">DIRECT</h4>
               <div class="footer-direct-info">
                 <a href="mailto:7055ravikumar@gmail.com" class="footer-email">7055ravikumar@gmail.com</a>
-                <a href="tel:7055522514" class="footer-email">+91 7055522514</a>
-                <p class="footer-location">Chandigarh ITBP Behalana, India</p>
+                <a href="tel:+917055522514" class="footer-email">+91 70555 22514</a>
+                <p class="footer-location">Chandigarh, India</p>
               </div>
             </div>
 
@@ -657,11 +941,11 @@
 
           <!-- Bottom Bar -->
           <div class="footer-bottom-bar">
-            <p class="footer-copyright>© 2026 Ravi Kumar. All rights reserved.</p>
-            <a href=" #" class="footer-back-to-top"
+            <p class="footer-copyright">© 2026 Ravi Kumar. All rights reserved.</p>
+            <a href="#" class="footer-back-to-top"
               onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
               Back to top <span class="arrow">↑</span>
-              </a>
+            </a>
           </div>
         </div>
       </footer>

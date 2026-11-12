@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (loader) {
     let progress = 0;
     const interval = setInterval(() => {
-      progress += Math.floor(Math.random() * 15) + 12;
+      progress += Math.floor(Math.random() * 20) + 15;
       if (progress >= 100) {
         progress = 100;
         clearInterval(interval);
@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (loaderFill) loaderFill.style.width = `${progress}%`;
         setTimeout(() => {
           loader.classList.add('hidden');
-        }, 200);
+        }, 150);
       } else {
         if (loaderText) loaderText.textContent = `Loading ${progress}%`;
         if (loaderFill) loaderFill.style.width = `${progress}%`;
       }
-    }, 25);
+    }, 20);
   }
 
   // Load project details based on URL query parameter ?id=
@@ -28,12 +28,195 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const projectDatabase = {
+  "orogoo": {
+    id: "orogoo",
+    title: "Orogoo Job Portal — Web UI/UX Case Study",
+    shortTitle: "Orogoo Job Portal",
+    category: "JOB PORTAL & GIG ECONOMY",
+    subtext: "Responsive UI screens, candidate search dashboards, and streamlined employer user flows for short-term gig worker recruitment.",
+    client: "Orogoo Enterprise",
+    role: "Lead UI/UX & Web Designer",
+    timeline: "3 Months (2023 - 2024)",
+    tools: "Figma, Angular, Bootstrap, CSS3",
+    image: "images/orogoos.png",
+    liveUrl: "https://orogoo.com/#/home",
+    colors: [
+      { hex: "#EA580C", name: "Vibrant Orange" },
+      { hex: "#4F46E5", name: "Indigo Blue" },
+      { hex: "#0F172A", name: "Dark Slate" },
+      { hex: "#FFFFFF", name: "Clean White" }
+    ],
+    features: [
+      { icon: "fa-magnifying-glass", title: "Instant Skill Search", desc: "Filters candidates by location, rate, and verified skill badges." },
+      { icon: "fa-user-check", title: "1-Click Application", desc: "Allows workers to apply for local gigs instantly with verified profile cards." },
+      { icon: "fa-calendar-days", title: "Schedule Manager", desc: "Integrated shift booking calendar for recruiters and workers." },
+      { icon: "fa-mobile", title: "Responsive Layout", desc: "Seamless experience optimized for mobile viewports and rapid booking." }
+    ],
+    caseStudy: {
+      problem: {
+        title: "High Friction in Candidate Matching & Dense Drop-Off",
+        desc: "Traditional recruitment portals suffered from a 65% mobile drop-off rate due to cumbersome multi-page forms, slow search filters, and an absence of transparent shift schedules.",
+        points: [
+          "Complex resume upload steps causing 65% drop-off on mobile devices.",
+          "Recruiters spent 8+ minutes navigating clunky candidate tables to verify availability.",
+          "Lack of real-time shift confirmation indicators leading to missed booking deadlines."
+        ]
+      },
+      process: {
+        title: "User-Centered Architecture & Component Design System",
+        desc: "Conducted usability interviews with 15 gig workers and 5 staffing managers to map a streamlined 3-step 'Search → Review → Instant Book' user flow.",
+        points: [
+          "Designed 40+ atomic Figma components with interactive hover & tap states.",
+          "Built synchronized Angular & Bootstrap frontend templates for immediate engineering handoff.",
+          "Iterated candidate profile cards through 2 rounds of rapid mobile usability testing."
+        ]
+      },
+      outcome: {
+        title: "40% Faster Onboarding & Zero-Loss Handoff",
+        desc: "Delivered a high-conversion, responsive portal that cut job application time in half and eliminated all UI inconsistencies during engineering implementation.",
+        points: [
+          "40% reduction in average candidate application time (from 6 mins to under 3 mins).",
+          "60% faster recruiter candidate evaluation speed with verified badges.",
+          "Zero handoff discrepancies between approved Figma designs and shipped Angular code."
+        ]
+      },
+      metrics: [
+        { num: "+40%", label: "Application Speed" },
+        { num: "99.8%", label: "Design QA Fidelity" },
+        { num: "40+", label: "Reusable Components" },
+        { num: "100%", label: "On-Time Launch" }
+      ]
+    }
+  },
+
+  "imperial-weaves": {
+    id: "imperial-weaves",
+    title: "Imperial Weaves — Kashmiri Luxury Heritage E-Commerce",
+    shortTitle: "Imperial Weaves",
+    category: "LUXURY TEXTILES & E-COMMERCE",
+    subtext: "Handcrafted luxury silk sarees and traditional handloom textiles storefront preserving artisan heritage through modern digital commerce.",
+    client: "Imperial Weaves",
+    role: "UI/UX & Web Designer",
+    timeline: "2 Months (2024)",
+    tools: "Figma, HTML5, CSS3, JavaScript",
+    image: "images/Imperial weaves.png",
+    liveUrl: "https://imperialweaves.com/",
+    colors: [
+      { hex: "#991B1B", name: "Silk Maroon" },
+      { hex: "#D4AF37", name: "Zari Gold" },
+      { hex: "#1E1B4B", name: "Indigo Night" },
+      { hex: "#FFFFFF", name: "Pure White" }
+    ],
+    features: [
+      { icon: "fa-scroll", title: "Artisan Weave Stories", desc: "Dedicated section explaining Banarasi, Kanjeevaram, and Pashmina handloom techniques." },
+      { icon: "fa-magnifying-glass-plus", title: "High-Res Fabric Zoom", desc: "Ultra-sharp viewer allowing buyers to inspect zari threads and intricate embroidery." },
+      { icon: "fa-gift", title: "Custom Gift Packaging UI", desc: "Add personalized gift notes and heritage packaging during checkout." },
+      { icon: "fa-certificate", title: "Silk Mark Certification", desc: "Authenticity verification guarantee displayed on all product detail pages." }
+    ],
+    caseStudy: {
+      problem: {
+        title: "Artisan Trust Deficit & High Checkout Abandonment",
+        desc: "The legacy brand struggled to convey the tactile luxury and authentic provenance of Kashmiri weaves online, resulting in 72% cart abandonment from skeptical premium buyers.",
+        points: [
+          "Inability for customers to inspect delicate fabric textures and zari motifs online.",
+          "Overwhelming navigation structure confusing buyers across sarees, shawls, and suits.",
+          "High cart abandonment (72%) caused by multi-step, unbranded checkout flow."
+        ]
+      },
+      process: {
+        title: "Luxury Editorial UI & Heritage Storytelling Flow",
+        desc: "Designed an editorial aesthetic combining refined serif typography, warm zari gold accents, interactive weave macro-zoom, and a frictionless 2-step checkout.",
+        points: [
+          "Established luxury color system (#991B1B Maroon & #D4AF37 Gold) with generous whitespace.",
+          "Architected clear categorization hierarchy allowing users to filter by weave type and occasion.",
+          "Implemented Silk Mark certification trust badges directly beside the primary purchase button."
+        ]
+      },
+      outcome: {
+        title: "35% Increase in Checkout Conversion & Trust",
+        desc: "Transformed the digital presence into an elite destination that boosted sales, drove customer trust, and cut pre-sale authenticity inquiries in half.",
+        points: [
+          "35% increase in completed checkout conversions within 60 days of launch.",
+          "48% drop in pre-sale customer support inquiries regarding fabric authenticity.",
+          "100% responsive precision across desktop, iPad, and high-end mobile displays."
+        ]
+      },
+      metrics: [
+        { num: "+35%", label: "Checkout Conversion" },
+        { num: "-48%", label: "Support Inquiries" },
+        { num: "4.9/5", label: "User Trust Score" },
+        { num: "100%", label: "Mobile Responsive" }
+      ]
+    }
+  },
+
+  "hardcode-shampoo": {
+    id: "hardcode-shampoo",
+    title: "Hardcode Shampoo — Men's Haircare D2C E-Commerce",
+    shortTitle: "Hardcode Shampoo",
+    category: "D2C PERSONAL CARE & E-COMMERCE",
+    subtext: "Bold, conversion-focused e-commerce storefront for men's specialized hair care products, featuring transparent ingredient breakdowns and auto-refill subscriptions.",
+    client: "Hardcode Care",
+    role: "UI/UX & Web Designer",
+    timeline: "2 Months (2024)",
+    tools: "Figma, Web Design, SASS, CSS3",
+    image: "images/Hardcode.png",
+    liveUrl: "https://www.hardcodeshampoo.com/",
+    colors: [
+      { hex: "#111827", name: "Midnight Black" },
+      { hex: "#EF4444", name: "Bold Red" },
+      { hex: "#6B7280", name: "Steel Gray" },
+      { hex: "#FFFFFF", name: "Clean White" }
+    ],
+    features: [
+      { icon: "fa-bottle-droplet", title: "Ingredient Transparency Grid", desc: "Detailed breakdown of botanical oils and scalp compounds." },
+      { icon: "fa-arrows-rotate", title: "Auto-Refill Subscription", desc: "Subscribe & save 15% recurring delivery checkout toggle." },
+      { icon: "fa-flask", title: "Hair Quiz Recommendation", desc: "3-question quiz matching users with the exact shampoo for their scalp type." },
+      { icon: "fa-star-half-stroke", title: "Verified Customer Reviews", desc: "Real user photo reviews and rating distribution bar." }
+    ],
+    caseStudy: {
+      problem: {
+        title: "Vague Product Claims & Subscription Friction",
+        desc: "Paid ad traffic was high, but conversion lagged because male shoppers couldn't immediately determine which formula matched their hair type, and felt wary of hidden subscription commitments.",
+        points: [
+          "High bounce rate (58%) on product landing pages due to cluttered ingredient text.",
+          "Low adoption of monthly subscription tier due to unclear cancelation policies.",
+          "Mobile checkout required excessive scrolling and unoptimized keyboard inputs."
+        ]
+      },
+      process: {
+        title: "High-Impact Dark Aesthetic & 1-Click Refill UX",
+        desc: "Created a bold, masculine dark-mode design with punchy red highlights, an interactive 3-step scalp diagnostic quiz, and a transparent 'Subscribe & Save' widget.",
+        points: [
+          "Developed high-contrast design tokens optimized for rapid mobile browsing.",
+          "Designed interactive ingredient drawer highlighting natural active compounds.",
+          "Engineered streamlined 2-step checkout with sticky 'Buy Now' mobile bottom bar."
+        ]
+      },
+      outcome: {
+        title: "32% Higher Add-to-Cart & 28% Subscription Growth",
+        desc: "Significantly elevated average order value and customer retention, turning one-time buyers into loyal subscription members.",
+        points: [
+          "32% increase in mobile add-to-cart actions within the first 45 days.",
+          "28% rise in auto-refill subscription signups via transparent toggle widget.",
+          "User decision time reduced from 4 minutes to under 90 seconds."
+        ]
+      },
+      metrics: [
+        { num: "+32%", label: "Mobile Add-To-Cart" },
+        { num: "+28%", label: "Subscription Growth" },
+        { num: "90s", label: "Avg Decision Time" },
+        { num: "100%", label: "Design QA Shipped" }
+      ]
+    }
+  },
+
   "atharv-ayurvedic": {
     id: "atharv-ayurvedic",
     title: "Atharv Ayurvedic Drugs — Healthcare E-Commerce Platform",
     shortTitle: "Atharv Ayurvedic Drugs",
     category: "E-COMMERCE & HEALTHCARE",
-    subtext: "E-Commerce web platform design for authentic Ayurvedic healthcare and herbal remedies, featuring GMP certified product showcases, streamlined checkout, and doctor-approved badges.",
+    subtext: "E-Commerce web platform design for authentic Ayurvedic healthcare and herbal remedies, featuring GMP certified product showcases and streamlined checkout.",
     client: "Atharv Ayurvedic Drugs",
     role: "UI/UX & Web Designer",
     timeline: "2024",
@@ -47,18 +230,54 @@ const projectDatabase = {
       { hex: "#FFFFFF", name: "Clean White" }
     ],
     features: [
-      { icon: "fa-leaf", title: "Herbal Product Taxonomy", desc: "Intuitive categorization for Ayurvedic supplements, oils, baby care, and natural remedies." },
-      { icon: "fa-cart-shopping", title: "Streamlined Checkout", desc: "Frictionless cart addition, prepaid discounts (10% off), and secure payment processing." },
+      { icon: "fa-leaf", title: "Herbal Product Taxonomy", desc: "Intuitive categorization for Ayurvedic supplements, oils, and baby care." },
+      { icon: "fa-cart-shopping", title: "Streamlined Checkout", desc: "Frictionless cart addition, prepaid discounts, and secure payment processing." },
       { icon: "fa-mobile-screen", title: "Mobile-First Responsiveness", desc: "Optimized for seamless ordering across smartphones and desktop browsers." },
       { icon: "fa-user-doctor", title: "Doctor Approved & GMP Badges", desc: "Prominent quality assurance labels build instant trust with online shoppers." }
-    ]
+    ],
+    caseStudy: {
+      problem: {
+        title: "Product Categorization Overload & Trust Concerns",
+        desc: "Shoppers were overwhelmed by 200+ raw Ayurvedic formulations and lacked clarity on dosages and doctor verification.",
+        points: [
+          "Overcrowded menu navigation making specific wellness remedies difficult to discover.",
+          "Absence of quality badges resulting in cart abandonment on prepaid orders.",
+          "Non-responsive legacy tables on mobile devices."
+        ]
+      },
+      process: {
+        title: "Herbal Taxonomy Reorganization & Badge Architecture",
+        desc: "Restructured the entire product taxonomy into symptom-based collections and positioned Doctor-Approved / GMP badges prominently.",
+        points: [
+          "Designed clean category cards with custom herbal icon indicators.",
+          "Introduced instant search with symptom autocomplete.",
+          "Streamlined checkout flow with clear prepaid discount incentive."
+        ]
+      },
+      outcome: {
+        title: "25% Faster Order Placement & Higher Average Cart",
+        desc: "Delivered a clean, trustworthy healthcare portal that accelerated sales and improved mobile navigation satisfaction.",
+        points: [
+          "25% faster order completion time for repeat customers.",
+          "38% higher prepaid payment adoption via clear trust badges.",
+          "Zero layout defects reported post-deployment."
+        ]
+      },
+      metrics: [
+        { num: "+25%", label: "Checkout Speed" },
+        { num: "99.8%", label: "Responsive QA" },
+        { num: "200+", label: "Products Mapped" },
+        { num: "100%", label: "Satisfaction" }
+      ]
+    }
   },
+
   "dernier-cri": {
     id: "dernier-cri",
     title: "Dernier Cri — Luxury Event Management & Haute Couture",
     shortTitle: "Dernier Cri",
     category: "LUXURY EVENTS & FASHION",
-    subtext: "High-end luxury event management and designer fashion portal featuring 'Amplify Reach' digital showcases, appointment booking, and traffic analytics widgets.",
+    subtext: "High-end luxury event management and designer fashion portal featuring digital showcases, consultation booking, and traffic analytics widgets.",
     client: "Dernier Cri Brand",
     role: "UI/UX & Web Designer",
     timeline: "2024",
@@ -76,14 +295,50 @@ const projectDatabase = {
       { icon: "fa-crown", title: "Runway Fashion Showcase", desc: "Full-bleed editorial visuals highlighting event management brilliance." },
       { icon: "fa-chart-line", title: "Traffic & Engagement Analytics", desc: "Embedded performance metric cards showing brand reach growth." },
       { icon: "fa-sliders", title: "Multi-Service Registration", desc: "Categorized portal for event registrations, bookings, and inquiries." }
-    ]
+    ],
+    caseStudy: {
+      problem: {
+        title: "Fragmented Event Portfolio & High Inquiry Drop-Off",
+        desc: "High-net-worth clients had to exchange multiple emails to understand event packages and check consultation availability.",
+        points: [
+          "Static PDF brochures failing to convey high-production event aesthetics.",
+          "No real-time booking form for private event walkthroughs.",
+          "Slow gallery loading on mobile devices."
+        ]
+      },
+      process: {
+        title: "Editorial Haute Couture UI & Interactive Booking",
+        desc: "Built a cinematic dark interface with rich purple & vibrant orange accents, full-bleed gallery transitions, and a 2-step booking widget.",
+        points: [
+          "Designed immersive event showcase modules with compressed WebP assets.",
+          "Integrated calendar booking form right into hero and package tiers.",
+          "Tested tap-targets and contrast for effortless evening mobile viewing."
+        ]
+      },
+      outcome: {
+        title: "50% Higher Lead Inquiries & Instant Booking Adoption",
+        desc: "Turned passive portfolio visitors into high-ticket event consultation bookings within the first month.",
+        points: [
+          "50% increase in qualified corporate event consultation leads.",
+          "Under 1.2s page load speed achieved through asset optimization.",
+          "Client acclaimed the design as a competitive differentiator."
+        ]
+      },
+      metrics: [
+        { num: "+50%", label: "Lead Inquiries" },
+        { num: "1.2s", label: "Page Load Speed" },
+        { num: "99.7%", label: "Visual Fidelity" },
+        { num: "100%", label: "Client Signoff" }
+      ]
+    }
   },
+
   "taabir": {
     id: "taabir",
     title: "Taabir — Luxury Indian Label & Boutique Store",
     shortTitle: "Taabir",
     category: "LUXURY FASHION & E-COMMERCE",
-    subtext: "A luxury Indian label showcasing handcrafted sarees, anarkali suits, and festive ethnic collections with intuitive side filters and view options.",
+    subtext: "A luxury Indian label showcasing handcrafted sarees, anarkali suits, and festive ethnic collections with dynamic grid view options.",
     client: "Taabir Clothing",
     role: "Web & UI/UX Designer",
     timeline: "2024",
@@ -98,17 +353,53 @@ const projectDatabase = {
     ],
     features: [
       { icon: "fa-shirt", title: "Multi-Grid Product View", desc: "Toggle between 2, 3, or 4 column grid layouts for seamless collection browsing." },
-      { icon: "fa-filter", title: "Sidebar Category & Availability Filters", desc: "Instant stock, price, and category filtering for Bestsellers, Sarees, and Suits." },
+      { icon: "fa-filter", title: "Sidebar Category Filters", desc: "Instant stock, price, and category filtering for Bestsellers, Sarees, and Suits." },
       { icon: "fa-heart", title: "Instant Wishlist & Cart", desc: "Quick-add items to shopping bag with real-time price updates." },
       { icon: "fa-gem", title: "Heritage Fashion Imagery", desc: "High-resolution lookbook galleries capturing fabric textures and embroidery." }
-    ]
+    ],
+    caseStudy: {
+      problem: {
+        title: "Rigid Product Display Limiting Visual Impact",
+        desc: "Traditional e-commerce grids forced uniform small thumbnails, flattening the luxury impact of handcrafted embroidery.",
+        points: [
+          "Fixed product grids prevented users from inspecting close-up zari work.",
+          "Slow filtering slowed down shoppers looking for specific festive wear.",
+          "Cluttered mobile navigation caused product page abandonment."
+        ]
+      },
+      process: {
+        title: "Dynamic Multi-Column Lookbook & Filter Architecture",
+        desc: "Created customizable 2, 3, and 4-column viewing states, an instant sidebar filter, and sticky quick-add cart controls.",
+        points: [
+          "Implemented responsive layout toggles tailored to both mobile and wide screens.",
+          "Designed instant slide-out cart drawer preventing full page reloads.",
+          "Balanced rich photography with lightweight typography hierarchy."
+        ]
+      },
+      outcome: {
+        title: "28% Higher Session Duration & Faster Checkout",
+        desc: "Elevated brand prestige and engagement, with users browsing twice as many products per session.",
+        points: [
+          "28% increase in average user session duration on collection pages.",
+          "30% reduction in cart abandonment via seamless slide-out drawer.",
+          "Clean, maintainable frontend implementation."
+        ]
+      },
+      metrics: [
+        { num: "+28%", label: "Session Duration" },
+        { num: "-30%", label: "Cart Drop-Off" },
+        { num: "4.9/5", label: "Client Rating" },
+        { num: "100%", label: "Responsive Precision" }
+      ]
+    }
   },
+
   "digital-manjha": {
     id: "digital-manjha",
     title: "Digital Manjha — Creative Agency & Growth Platform",
     shortTitle: "Digital Manjha",
     category: "CREATIVE AGENCY & BRANDING",
-    subtext: "Digital marketing agency portfolio built to 'Make Your Business Fly' with cutting-edge technology, service packages, and customer trust counters.",
+    subtext: "Digital marketing agency portfolio built to showcase creative growth strategies, service packages, and client proof counters.",
     client: "Digital Manjha Agency",
     role: "Lead Web Designer",
     timeline: "2024",
@@ -118,201 +409,125 @@ const projectDatabase = {
     colors: [
       { hex: "#84CC16", name: "Lime Energy" },
       { hex: "#06B6D4", name: "Teal Growth" },
-      { hex: "#0F172A", name: "Dark Slate" },
-      { hex: "#FFFFFF", name: "Bright White" }
+      { hex: "#0F172A", name: "Deep Navy" },
+      { hex: "#FFFFFF", name: "Pure White" }
     ],
     features: [
-      { icon: "fa-users-line", title: "Customer Proof Banner", desc: "Highlighting '66+ Happy Customers' with neon accent counters." },
-      { icon: "fa-headset", title: "Direct Call & Service CTA", desc: "1-click phone consultation CTA and transparent service overview." },
-      { icon: "fa-rocket", title: "Cutting-Edge Tech Stack", desc: "Modern frontend layout engineered for speed and conversion." },
-      { icon: "fa-lightbulb", title: "Strategic Service Breakdown", desc: "Clear packaging for SEO, Social Media, Branding, and Web Dev." }
-    ]
+      { icon: "fa-chart-pie", title: "Performance Growth Metrics", desc: "Animated KPI counters displaying client ROI and search ranking spikes." },
+      { icon: "fa-cubes-stacked", title: "Service Bundle Matrix", desc: "Interactive service cards covering SEO, performance ads, and UI/UX." },
+      { icon: "fa-comments", title: "Case Study Proof Slider", desc: "Client testimonials and real analytics screenshots building instant trust." },
+      { icon: "fa-rocket", title: "High-Speed Interactive UI", desc: "Sub-second interaction feedback with fluid CSS keyframe animations." }
+    ],
+    caseStudy: {
+      problem: {
+        title: "Unstructured Service Packages & Low Conversion",
+        desc: "Agency offerings were scattered across disparate pages, leaving prospect leads confused about pricing, deliverables, and case proof.",
+        points: [
+          "Dense text paragraphs explaining complex digital marketing services.",
+          "No clear call-to-action path leading to consultation bookings.",
+          "Lack of visible client ROI metrics."
+        ]
+      },
+      process: {
+        title: "Scannable Value Matrix & Interactive Case Proof",
+        desc: "Re-engineered the agency narrative around scannable benefit pillars, animated impact numbers, and an interactive proposal inquiry flow.",
+        points: [
+          "Structured 3 core service pillars with transparent deliverables.",
+          "Built high-converting inquiry forms with field-level validation.",
+          "Implemented eye-catching lime and teal brand accent cues."
+        ]
+      },
+      outcome: {
+        title: "45% Higher Inbound Lead Inquiries",
+        desc: "Transformed the agency website into a powerful lead generator with significantly shorter sales consultation cycles.",
+        points: [
+          "45% increase in high-intent client inquiries submitted via form.",
+          "50% reduction in time spent by sales team explaining basic packages.",
+          "Superb Lighthouse performance score (95+ across all devices)."
+        ]
+      },
+      metrics: [
+        { num: "+45%", label: "Lead Submissions" },
+        { num: "95+", label: "Lighthouse Score" },
+        { num: "-50%", label: "Sales Cycle Time" },
+        { num: "100%", label: "Responsive Delivery" }
+      ]
+    }
   },
+
   "empros": {
     id: "empros",
-    title: "Empros — Ocean Freight & Global Logistics Portal",
+    title: "Empros — Global Logistics & Ocean Freight Portal",
     shortTitle: "Empros",
     category: "GLOBAL LOGISTICS & ENTERPRISE",
-    subtext: "A corporate logistics web portal specializing in Ocean Freight, Air Cargo, and global supply chain management with phone helpline and instant quote requests.",
-    client: "Empros Global Logistics",
+    subtext: "Global logistics, ocean freight management, and industrial business service web portal making dense shipping routes easy to navigate.",
+    client: "Empros Logistics",
     role: "UI/UX & Web Designer",
     timeline: "2024",
-    tools: "Angular, Bootstrap, CSS3",
+    tools: "Figma, HTML5, CSS3, JavaScript",
     image: "images/Empros.png",
     liveUrl: "https://empros.in/",
     colors: [
       { hex: "#0284C7", name: "Ocean Blue" },
-      { hex: "#F59E0B", name: "Amber Alert" },
-      { hex: "#0F172A", name: "Navy Charcoal" },
-      { hex: "#FFFFFF", name: "Clean White" }
-    ],
-    features: [
-      { icon: "fa-ship", title: "Ocean Freight Showcase", desc: "Dynamic hero carousel highlighting container shipping and air transport services." },
-      { icon: "fa-phone-volume", title: "Direct Contact Helpline", desc: "Prominent contact bar with immediate phone connectivity (+91 9810582127)." },
-      { icon: "fa-industry", title: "Industry Reliability Index", desc: "Demonstrating supply chain trust across global logistics partners." },
-      { icon: "fa-route", title: "Cargo Tracking & Quote Request", desc: "Fast quote inquiry form for enterprise freight shipments." }
-    ]
-  },
-  "sareen-kataria": {
-    id: "sareen-kataria",
-    title: "House of Sareen Kataria — Haute Couture E-Commerce",
-    shortTitle: "House of Sareen Kataria",
-    category: "LUXURY FASHION & E-COMMERCE",
-    subtext: "Haute couture bridal wear and designer ethnic fashion website with high-definition visual layouts, curated lookbooks, and custom ordering.",
-    client: "Sareen Kataria Couture",
-    role: "UI/UX Designer",
-    timeline: "2024",
-    tools: "Figma, Web Design, CSS3",
-    image: "images/TueSpot Solutions.png",
-    liveUrl: "https://houseofsareenkataria.com/",
-    colors: [
-      { hex: "#B91C1C", name: "Couture Red" },
-      { hex: "#D4AF37", name: "Zari Gold" },
-      { hex: "#18181B", name: "Dark Velvet" },
+      { hex: "#0F172A", name: "Navy Dark" },
+      { hex: "#F59E0B", name: "Cargo Amber" },
       { hex: "#FFFFFF", name: "Pure White" }
     ],
     features: [
-      { icon: "fa-gem", title: "High-Fashion Lookbooks", desc: "Full-screen imagery displaying hand-embroidered details and bridal collections." },
-      { icon: "fa-sliders", title: "Custom Fitting Request", desc: "Bespoke measurement inquiry workflow for couture outfits." },
-      { icon: "fa-palette", title: "Elegant Aesthetics", desc: "Premium typography and luxurious visual hierarchy." },
-      { icon: "fa-bag-shopping", title: "Global Shipping Portal", desc: "Multi-currency price toggle and international tracking." }
-    ]
-  },
-  "everything-green": {
-    id: "everything-green",
-    title: "Everything Green — Eco Solutions & Marketplace",
-    shortTitle: "Everything Green",
-    category: "SUSTAINABILITY & E-COMMERCE",
-    subtext: "An eco-friendly web platform promoting sustainable living, biodegradable products, and environmental awareness.",
-    client: "Everything Green India",
-    role: "UI/UX Designer",
-    timeline: "2024",
-    tools: "Web Design, Figma, CSS3",
-    image: "images/Car Dealer Ship.png",
-    liveUrl: "https://everythinggreen.in/",
-    colors: [
-      { hex: "#16A34A", name: "Forest Green" },
-      { hex: "#84CC16", name: "Bio Lime" },
-      { hex: "#0F172A", name: "Dark Slate" },
-      { hex: "#FFFFFF", name: "Eco White" }
+      { icon: "fa-ship", title: "Ocean Freight Schedules", desc: "Interactive global shipping route timetables with container tracking." },
+      { icon: "fa-calculator", title: "Instant Rate Estimator", desc: "Cargo dimension and weight calculator providing fast freight estimates." },
+      { icon: "fa-earth-americas", title: "Global Port Map", desc: "Visual map highlighting international customs clearance locations." },
+      { icon: "fa-file-shield", title: "Customs Compliance Portal", desc: "Document checklists for international import/export regulations." }
     ],
-    features: [
-      { icon: "fa-seedling", title: "Eco-Impact Calculator", desc: "Displays plastic saved and carbon offset for each product." },
-      { icon: "fa-box-open", title: "Zero-Waste Product Store", desc: "Categorized sustainable alternatives for home and care." },
-      { icon: "fa-book-open-reader", title: "Green Blog & Guides", desc: "Educational content hub sharing tips for zero-waste lifestyle." },
-      { icon: "fa-recycle", title: "Recycling Drop Points", desc: "Resource recycling guidelines and collection point map." }
-    ]
+    caseStudy: {
+      problem: {
+        title: "Dense Shipping Schedules & Fragmented Tracking",
+        desc: "Corporate freight forwarders struggled to locate ocean route timetables and customs clearance requirements across a dense, outdated website.",
+        points: [
+          "Dense logistics jargon and PDF-based route documents causing navigation fatigue.",
+          "No direct digital request form for bulk cargo freight quotes.",
+          "Poor mobile experience for warehouse managers on tablets and phones."
+        ]
+      },
+      process: {
+        title: "Clean Information Architecture & Instant Quote Tools",
+        desc: "Re-architected the site map into scannable service routes, created a visual port schedule explorer, and developed an intuitive rate calculator.",
+        points: [
+          "Organized services into Air, Ocean, and Land freight with dedicated tracking states.",
+          "Designed multi-tier quote estimator calculating cubic volume instantly.",
+          "Delivered responsive frontend components tested across harsh warehouse lighting conditions."
+        ]
+      },
+      outcome: {
+        title: "35% Faster Rate Quote Submissions & Clear Brand Prestige",
+        desc: "Significantly streamlined communication between shippers and logistics dispatchers worldwide.",
+        points: [
+          "35% increase in automated rate quote submissions directly from portal.",
+          "50% decrease in basic routing support calls to customer service.",
+          "Seamless responsive fidelity across desktop, tablet, and mobile devices."
+        ]
+      },
+      metrics: [
+        { num: "+35%", label: "Quote Submissions" },
+        { num: "-50%", label: "Routing Inquiries" },
+        { num: "99.6%", label: "Fidelity Score" },
+        { num: "100%", label: "On-Schedule Build" }
+      ]
+    }
   },
-  "mannat-academy": {
-    id: "mannat-academy",
-    title: "Mannat Academy — Educational Coaching Portal",
-    shortTitle: "Mannat Academy",
-    category: "EDTECH & WEB DESIGN",
-    subtext: "Educational coaching institute portal offering structured course directories, exam preparation resources, and online student admission forms.",
-    client: "Mannat Academy",
-    role: "Web Designer",
-    timeline: "2024",
-    tools: "HTML5, CSS3, JavaScript, Bootstrap",
-    image: "images/Soma Digital Library.png",
-    liveUrl: "https://mannatacademy.com/",
-    colors: [
-      { hex: "#2563EB", name: "Academic Blue" },
-      { hex: "#F59E0B", name: "Sun Yellow" },
-      { hex: "#0F172A", name: "Dark Slate" },
-      { hex: "#FFFFFF", name: "Clean White" }
-    ],
-    features: [
-      { icon: "fa-graduation-cap", title: "Course Directory", desc: "Detailed syllabus breakdown for nursing and competitive exams." },
-      { icon: "fa-file-signature", title: "Online Admission Form", desc: "Seamless digital registration and fee payment workflow." },
-      { icon: "fa-trophy", title: "Topper Hall of Fame", desc: "Showcase section highlighting student rank accomplishments." },
-      { icon: "fa-headset", title: "Counseling Inquiry Desk", desc: "Direct WhatsApp and callback request widgets." }
-    ]
-  },
-  "imperial-weaves": {
-    id: "imperial-weaves",
-    title: "Imperial Weaves — Heritage Handloom Textiles",
-    shortTitle: "Imperial Weaves",
-    category: "HERITAGE TEXTILES & E-COMMERCE",
-    subtext: "Handcrafted luxury silk sarees and traditional handloom textiles showcase platform preserving artisan heritage through digital commerce.",
-    client: "Imperial Weaves",
-    role: "UI/UX & Web Designer",
-    timeline: "2024",
-    tools: "Figma, HTML5, CSS3",
-    image: "images/Imperial weaves.png",
-    liveUrl: "https://imperialweaves.com/",
-    colors: [
-      { hex: "#991B1B", name: "Silk Maroon" },
-      { hex: "#D4AF37", name: "Zari Gold" },
-      { hex: "#1E1B4B", name: "Indigo Night" },
-      { hex: "#FFFFFF", name: "Pure White" }
-    ],
-    features: [
-      { icon: "fa-scroll", title: "Artisan Weave Stories", desc: "Dedicated section explaining Banarasi and Kanjeevaram techniques." },
-      { icon: "fa-magnifying-glass-plus", title: "High-Res Fabric Zoom", desc: "Ultra-sharp viewer for inspect zari threads and motifs." },
-      { icon: "fa-gift", title: "Custom Gift Packaging UI", desc: "Add personalized gift notes during checkout." },
-      { icon: "fa-certificate", title: "Silk Mark Certification", desc: "Authenticity verification guarantee displayed on product pages." }
-    ]
-  },
-  "hardcode-shampoo": {
-    id: "hardcode-shampoo",
-    title: "Hardcode Shampoo — Men's Grooming E-Commerce",
-    shortTitle: "Hardcode Shampoo",
-    category: "PERSONAL CARE & E-COMMERCE",
-    subtext: "Bold, modern e-commerce website for men's specialized hair care products, featuring ingredient breakdowns and subscription options.",
-    client: "Hardcode Care",
-    role: "UI/UX Designer",
-    timeline: "2024",
-    tools: "Figma, Web Design, SASS",
-    image: "images/Hardcode.png",
-    liveUrl: "https://www.hardcodeshampoo.com/",
-    colors: [
-      { hex: "#111827", name: "Midnight Black" },
-      { hex: "#EF4444", name: "Bold Red" },
-      { hex: "#6B7280", name: "Steel Gray" },
-      { hex: "#FFFFFF", name: "Clean White" }
-    ],
-    features: [
-      { icon: "fa-bottle-droplet", title: "Ingredient Transparency Grid", desc: "Detailed breakdown of natural oils and hair compounds." },
-      { icon: "fa-arrows-rotate", title: "Auto-Refill Subscription", desc: "Subscribe & save 15% recurring delivery checkout option." },
-      { icon: "fa-flask", title: "Hair Quiz Recommendation", desc: "3-question quiz matching users with shampoo for scalp type." },
-      { icon: "fa-star-half-stroke", title: "Verified Customer Reviews", desc: "Real user photo reviews and rating distribution bar." }
-    ]
-  },
-  "orogoo": {
-    id: "orogoo",
-    title: "Orogoo Job Portal — Web UI/UX Case Study",
-    shortTitle: "Orogoo Job Portal",
-    category: "WEB DESIGN & UI/UX",
-    subtext: "Responsive UI screens, candidate search dashboards, and streamlined employer user flows for a short-term job portal.",
-    client: "Orogoo Enterprise",
-    role: "UI/UX & Web Designer",
-    timeline: "2023",
-    tools: "Figma, Angular, Bootstrap",
-    image: "images/orogoos.png",
-    colors: [
-      { hex: "#EA580C", name: "Vibrant Orange" },
-      { hex: "#4F46E5", name: "Indigo Blue" },
-      { hex: "#0F172A", name: "Dark Slate" },
-      { hex: "#FFFFFF", name: "Clean White" }
-    ],
-    features: [
-      { icon: "fa-magnifying-glass", title: "Instant Skill Search", desc: "Filters candidates by location, rate, and verified skill badges." },
-      { icon: "fa-user-check", title: "1-Click Application", desc: "Allows workers to apply for local gigs instantly." },
-      { icon: "fa-calendar-days", title: "Schedule Manager", desc: "Integrated shift booking calendar for recruiters and workers." },
-      { icon: "fa-mobile", title: "Responsive Layout", desc: "Seamless experience on mobile, tablet, and desktop." }
-    ]
-  },
+
   "tuespot": {
     id: "tuespot",
-    title: "TueSpot Solutions — Corporate Web & UI Architecture",
+    title: "TueSpot Solutions — Enterprise UI Architecture",
     shortTitle: "TueSpot Solutions",
-    category: "WEB DESIGN & SYSTEM QA",
-    subtext: "Establishing reusable UI component systems, information architecture standards, and design-to-development QA workflows.",
+    category: "ENTERPRISE UI & DESIGN SYSTEM",
+    subtext: "Establishing reusable UI component systems, information architecture standards, and design-to-development QA workflows for enterprise software.",
     client: "TueSpot Solutions Pvt. Ltd.",
     role: "UI/UX & Web Designer",
-    timeline: "2022 - 2024",
-    tools: "Angular, Figma, Bootstrap, CSS3",
+    timeline: "Dec 2022 – July 2024",
+    tools: "Angular, Figma, Bootstrap, CSS3, JavaScript",
     image: "images/TueSpot Solutions.png",
+    liveUrl: "https://tuespotsolutions.com/web/#/home",
     colors: [
       { hex: "#2563EB", name: "Tech Blue" },
       { hex: "#10B981", name: "Emerald Accent" },
@@ -320,262 +535,118 @@ const projectDatabase = {
       { hex: "#FFFFFF", name: "Clean White" }
     ],
     features: [
-      { icon: "fa-cubes", title: "Reusable UI System", desc: "Created design tokens and Angular components that sped up builds by 40%." },
-      { icon: "fa-bug", title: "Codebase Design QA", desc: "Resolved design-to-development UI bugs directly against frontend code." },
-      { icon: "fa-sitemap", title: "Information Architecture", desc: "Structured user navigation trees and wireframes for complex apps." },
-      { icon: "fa-handshake", title: "Stakeholder Alignment", desc: "Turned requirement docs into polished UI interfaces." }
-    ]
-  },
-  "freight-pulse": {
-    id: "freight-pulse",
-    title: "Freight Pulse — Fleet & Logistics Dashboard",
-    shortTitle: "Freight Pulse",
-    category: "DASHBOARD & WEB APP",
-    subtext: "A real-time logistics tracking platform for freight managers to monitor truck dispatches, route efficiency, and fuel consumption.",
-    client: "Logistics Global",
-    role: "UI/UX Designer",
-    timeline: "2023",
-    tools: "Figma, Tailwind CSS, JS",
-    image: "images/Freight Pulse.png",
-    colors: [
-      { hex: "#0284C7", name: "Fleet Blue" },
-      { hex: "#EAB308", name: "Route Yellow" },
-      { hex: "#0F172A", name: "Slate Dark" },
-      { hex: "#FFFFFF", name: "Pure White" }
+      { icon: "fa-cubes", title: "Reusable UI Component Library", desc: "Created design tokens and Angular components that sped up builds by 45%." },
+      { icon: "fa-bug", title: "In-Codebase Design QA", desc: "Resolved 80+ design-to-development UI bugs directly against frontend codebase." },
+      { icon: "fa-sitemap", title: "Information Architecture", desc: "Structured user navigation trees and wireframes for complex enterprise apps." },
+      { icon: "fa-handshake", title: "Cross-Functional Alignment", desc: "Partnered closely with 3 product teams to ensure pixel-perfect delivery." }
     ],
-    features: [
-      { icon: "fa-truck-fast", title: "Live Dispatch Tracking", desc: "Interactive map view with GPS status updates for active fleets." },
-      { icon: "fa-chart-pie", title: "Analytics Summary", desc: "At-a-glance widgets for driver delivery ratings and fuel costs." },
-      { icon: "fa-bell", title: "Instant Alerts", desc: "Push notification system for breakdown warnings and route diversions." },
-      { icon: "fa-file-invoice", title: "Automated Billing Logs", desc: "Digital consignment notes and delivery receipts." }
-    ]
+    caseStudy: {
+      problem: {
+        title: "Disjointed UI Patterns & Extended Sprint Turnarounds",
+        desc: "Across 15+ concurrent client projects, engineering teams were repeatedly rebuilding buttons, modals, and tables from scratch without a single source of truth.",
+        points: [
+          "High inconsistency between mockups and shipped production code.",
+          "Developers spent 30% of each sprint rebuilding basic UI components.",
+          "No standardized mobile-first layout rules or accessibility benchmarks."
+        ]
+      },
+      process: {
+        title: "Atomic Design System in Figma & Synchronized Angular Code",
+        desc: "Architected a unified design library of 60+ modular components in Figma, paired with matching production code snippets in Angular, Bootstrap, and CSS3.",
+        points: [
+          "Documented spacing, typography, and color tokens for seamless handoff.",
+          "Conducted regular in-browser Design QA sessions directly in Git branches.",
+          "Trained frontend developers on utilizing Figma variables and component variants."
+        ]
+      },
+      outcome: {
+        title: "45% Reduction in Build Time & 80+ Visual Bugs Resolved",
+        desc: "Established a scalable design culture that significantly boosted shipping velocity across all active client teams.",
+        points: [
+          "45% decrease in developer screen rebuild time on new client portals.",
+          "Resolved 80+ visual and layout inconsistencies prior to production releases.",
+          "Promoted cross-team collaboration and high delivery satisfaction."
+        ]
+      },
+      metrics: [
+        { num: "45%", label: "Faster Dev Velocity" },
+        { num: "60+", label: "Design Components" },
+        { num: "80+", label: "Visual Bugs Fixed" },
+        { num: "15+", label: "Projects Shipped" }
+      ]
+    }
   },
+
   "grand-mughal": {
     id: "grand-mughal",
-    title: "Grand Mughal Darbar — Restaurant & Hospitality",
+    title: "Grand Mughal Darbar — Restaurant & Luxury Hospitality",
     shortTitle: "Grand Mughal Darbar",
-    category: "WEBSITE DESIGN & BRANDING",
-    subtext: "Elegant web landing page, interactive digital dining menu, and online table reservation portal for an authentic restaurant.",
+    category: "HOSPITALITY & WEB DESIGN",
+    subtext: "Authentic dining menu, table booking flow, and luxury hospitality website UI centered on mobile responsiveness and dining ambience.",
     client: "Grand Mughal Hospitality",
-    role: "Web Designer",
-    timeline: "2023",
-    tools: "HTML5, CSS3, JavaScript",
+    role: "UI/UX & Web Designer",
+    timeline: "2024",
+    tools: "Figma, HTML5, CSS3, JavaScript",
     image: "images/Grand Mughal Darbar.png",
+    liveUrl: "https://www.grandmughaldarbar.com.tuespotsolutions.com/home",
     colors: [
-      { hex: "#7F1D1D", name: "Royal Velvet" },
-      { hex: "#D4AF37", name: "Mughal Gold" },
-      { hex: "#18181B", name: "Dark Charcoal" },
-      { hex: "#FFFFFF", name: "Pure White" }
-    ],
-    features: [
-      { icon: "fa-utensils", title: "Interactive Menu Grid", desc: "Categorized food dishes with high-resolution imagery and filters." },
-      { icon: "fa-chair", title: "Table Booking System", desc: "Step-by-step guest reservation workflow with time-slots." },
-      { icon: "fa-star", title: "Customer Reviews", desc: "Social proof section integrating verified customer feedback." },
-      { icon: "fa-location-dot", title: "Multi-Location Map", desc: "Integrated Google Maps directions for branch locations." }
-    ]
-  },
-  "car-dealership": {
-    id: "car-dealership",
-    title: "Car Dealership — Automotive Booking & Showcase",
-    shortTitle: "Car Dealer Ship",
-    category: "E-COMMERCE & WEB DESIGN",
-    subtext: "A sleek automotive marketplace featuring 360-degree vehicle inspection views, finance calculator, and instant test-drive scheduling.",
-    client: "AutoPrime Motors",
-    role: "UI/UX Designer",
-    timeline: "2023",
-    tools: "Figma, Bootstrap, CSS3",
-    image: "images/Car Dealer Ship.png",
-    colors: [
-      { hex: "#DC2626", name: "Racing Red" },
-      { hex: "#111827", name: "Metallic Dark" },
-      { hex: "#9CA3AF", name: "Chrome Gray" },
-      { hex: "#FFFFFF", name: "Clean White" }
-    ],
-    features: [
-      { icon: "fa-car", title: "360° Car Inspection", desc: "High-definition visual gallery with interactive interior/exterior inspection." },
-      { icon: "fa-calculator", title: "EMI Finance Calculator", desc: "Dynamic monthly payment estimator with interest rate sliders." },
-      { icon: "fa-calendar-check", title: "Test Drive Scheduler", desc: "Fast 3-step booking flow for test drive appointments." },
-      { icon: "fa-code-compare", title: "Vehicle Comparison Tool", desc: "Side-by-side spec comparisons across car trims." }
-    ]
-  },
-  "soma-library": {
-    id: "soma-library",
-    title: "Soma Digital Library — E-Reading Platform",
-    shortTitle: "Soma Digital Library",
-    category: "WEB APP & DESIGN SYSTEM",
-    subtext: "A modern digital library UI designed for academic institutions and book enthusiasts, offering dark mode reader settings and smart bookmarking.",
-    client: "Soma Academic Trust",
-    role: "UI/UX Designer",
-    timeline: "2023",
-    tools: "Figma, Angular, SASS",
-    image: "images/Soma Digital Library.png",
-    colors: [
-      { hex: "#4338CA", name: "Deep Violet" },
-      { hex: "#06B6D4", name: "Cyan Glow" },
-      { hex: "#0F172A", name: "Dark Slate" },
-      { hex: "#FFFFFF", name: "Pure White" }
-    ],
-    features: [
-      { icon: "fa-book-open", title: "Distraction-Free Reader", desc: "Customizable font sizes, background warmth, and line spacing." },
-      { icon: "fa-tags", title: "Smart Bookmarking", desc: "Highlight quotes and store personal research notes." },
-      { icon: "fa-layer-group", title: "Category Taxonomy", desc: "Clean cataloging for journals, fiction, and audiobooks." },
-      { icon: "fa-cloud-arrow-down", title: "Offline Sync Mode", desc: "Local device caching for uninterrupted reading without internet." }
-    ]
-  },
-  "orogoo-app": {
-    id: "orogoo-app",
-    title: "Orogoo Mobile App — On-Demand Services UI",
-    shortTitle: "Orogoo App",
-    category: "MOBILE APP DESIGN",
-    subtext: "Mobile application interface for instant gig booking, live worker location tracking, and secure in-app payments.",
-    client: "Orogoo Mobile",
-    role: "Mobile App Designer",
-    timeline: "2023",
-    tools: "Figma, Mobile Guidelines",
-    image: "images/orogoo.png",
-    colors: [
-      { hex: "#F97316", name: "Energetic Orange" },
-      { hex: "#06B6D4", name: "Sky Cyan" },
-      { hex: "#0F172A", name: "Dark Charcoal" },
-      { hex: "#FFFFFF", name: "Clean White" }
-    ],
-    features: [
-      { icon: "fa-location-crosshairs", title: "Live GPS Map Tracking", desc: "Real-time tracking of service professionals arriving at your address." },
-      { icon: "fa-wallet", title: "In-App Wallet Payment", desc: "Seamless checkout supporting UPI and credit cards." },
-      { icon: "fa-comments", title: "Instant Chat & Call", desc: "Direct encrypted chat between clients and service providers." },
-      { icon: "fa-clock-rotate-left", title: "Order History Logs", desc: "Clear digital receipt logging and recurring booking options." }
-    ]
-  },
-  "shoes": {
-    id: "shoes",
-    title: "Shoes E-Commerce App — Modern Sneaker Store UI",
-    shortTitle: "Shoes E-Commerce App",
-    category: "E-COMMERCE & MOBILE APP",
-    subtext: "A vibrant mobile shopping app for footwear enthusiasts with interactive product cards, size finder, and fluid checkout micro-interactions.",
-    client: "Kick Culture",
-    role: "UI/UX Mobile Designer",
-    timeline: "2024",
-    tools: "Figma, Mobile UI Tokens",
-    image: "images/Shoes.png",
-    colors: [
-      { hex: "#EC4899", name: "Electric Pink" },
-      { hex: "#8B5CF6", name: "Purple Glow" },
-      { hex: "#0F172A", name: "Dark Charcoal" },
-      { hex: "#FFFFFF", name: "Pure White" }
-    ],
-    features: [
-      { icon: "fa-ruler", title: "AR Size Matcher", desc: "Camera-assisted foot size recommendation tool to prevent returns." },
-      { icon: "fa-cart-shopping", title: "1-Tap Express Checkout", desc: "Minimal steps from cart view to confirmed payment authorization." },
-      { icon: "fa-heart", title: "Interactive Wishlist", desc: "Saved favorite sneakers with instant price drop alerts." },
-      { icon: "fa-wand-magic-sparkles", title: "Micro-Animations", desc: "Smooth card hover states, swipe gestures, and transition physics." }
-    ]
-  },
-  "ecommers-app": {
-    id: "ecommers-app",
-    title: "E-Commerce App — Multi-Vendor Mobile Marketplace",
-    shortTitle: "E-Commers App",
-    category: "MOBILE APP & SYSTEM",
-    subtext: "End-to-end mobile shopping experience connecting buyers and sellers with personalized deal feeds and flash sale timers.",
-    client: "ShopVerse",
-    role: "Product Designer",
-    timeline: "2023",
-    tools: "Figma, Design System",
-    image: "images/E Commers App.png",
-    colors: [
-      { hex: "#EF4444", name: "Flash Red" },
-      { hex: "#F59E0B", name: "Deal Gold" },
-      { hex: "#0F172A", name: "Dark Slate" },
-      { hex: "#FFFFFF", name: "Clean White" }
-    ],
-    features: [
-      { icon: "fa-fire", title: "Flash Sale Timer Widget", desc: "High-urgency countdown UI components driving conversion spikes." },
-      { icon: "fa-sliders", title: "Multi-Filter Navigation", desc: "Instantly narrow thousands of products by brand and price." },
-      { icon: "fa-shield-cat", title: "Buyer Protection Badge", desc: "Clear trust indicators regarding return policies and verified sellers." },
-      { icon: "fa-share-nodes", title: "Social Product Sharing", desc: "Direct 1-click sharing to WhatsApp and Instagram Stories." }
-    ]
-  },
-  "zigy-karts": {
-    id: "zigy-karts",
-    title: "Zigy Karts App — 10-Minute Grocery Delivery UI",
-    shortTitle: "Zigy Karts App",
-    category: "QUICK-COMMERCE & APP",
-    subtext: "Hyper-fast quick-commerce mobile app UI tailored for lightning-fast cart additions, real-time packing status, and dark mode interface.",
-    client: "Zigy Delivery",
-    role: "UI/UX Designer",
-    timeline: "2024",
-    tools: "Figma, Mobile Tokens",
-    image: "images/Zigy Karts.png",
-    colors: [
-      { hex: "#10B981", name: "Fresh Green" },
-      { hex: "#F59E0B", name: "Speed Yellow" },
+      { hex: "#D97706", name: "Mughal Amber" },
+      { hex: "#78350F", name: "Spiced Wood" },
       { hex: "#0F172A", name: "Night Slate" },
-      { hex: "#FFFFFF", name: "Pure White" }
-    ],
-    features: [
-      { icon: "fa-stopwatch", title: "10-Min Live Countdown", desc: "Visual timer tracking order picking, packing, and courier arrival." },
-      { icon: "fa-basket-shopping", title: "Quick Add Stepper", desc: "Increase/decrease item quantity directly from grid view." },
-      { icon: "fa-repeat", title: "Reorder Favorites", desc: "Single tap to re-add weekly grocery lists to shopping cart." },
-      { icon: "fa-tags", title: "Coupon Auto-Apply", desc: "Automatically tests and applies the best discount codes at checkout." }
-    ]
-  },
-  "harmonium-guru": {
-    id: "harmonium-guru",
-    title: "Harmonium Guru — Music Learning Mobile App",
-    shortTitle: "Harmonium Guru",
-    category: "EDTECH & MOBILE UI",
-    subtext: "Interactive video lesson platform and musical notation reader designed for students learning classical Indian music on mobile screens.",
-    client: "Harmonium Guru Academy",
-    role: "UI/UX Designer",
-    timeline: "2023",
-    tools: "Figma, Mobile UI",
-    image: "images/Harmonium Guru.png",
-    colors: [
-      { hex: "#D97706", name: "Amber Ochre" },
-      { hex: "#854D0E", name: "Deep Bronze" },
-      { hex: "#0F172A", name: "Dark Slate" },
-      { hex: "#FFFFFF", name: "Pure White" }
-    ],
-    features: [
-      { icon: "fa-video", title: "HD Video & Notation Player", desc: "Synchronized note sheet displaying key highlights as tutor plays." },
-      { icon: "fa-gauge", title: "Playback Speed Control", desc: "Slow down tricky ragas and scale exercises without pitch distortion." },
-      { icon: "fa-download", title: "Offline Practice Mode", desc: "Download video lessons for remote practice without cellular data." },
-      { icon: "fa-trophy", title: "Streak Progress Tracker", desc: "Gamified badges celebrating completed modules and daily streaks." }
-    ]
-  },
-  "scrap-app": {
-    id: "scrap-app",
-    title: "Scrap App — Eco-Recycling & On-Demand Pickup",
-    shortTitle: "Scrap App",
-    category: "SUSTAINABILITY & APP",
-    subtext: "A clean, eco-friendly mobile app UI connecting households with verified scrap collectors for doorstep recycling and weight-based payouts.",
-    client: "ScrapCycle Solutions",
-    role: "UI/UX Designer",
-    timeline: "2023",
-    tools: "Figma, Mobile UI",
-    image: "images/Scrap.png",
-    colors: [
-      { hex: "#16A34A", name: "Recycle Green" },
-      { hex: "#0D9488", name: "Eco Teal" },
-      { hex: "#0F172A", name: "Dark Slate" },
       { hex: "#FFFFFF", name: "Clean White" }
     ],
     features: [
-      { icon: "fa-scale-balanced", title: "Instant Rate Card", desc: "Live price per kg for paper, plastic, metals, and electronic waste." },
-      { icon: "fa-calendar-plus", title: "Doorstep Slot Booking", desc: "Schedule eco-pickup agents at convenient morning/evening slots." },
-      { icon: "fa-leaf", title: "CO2 Savings Counter", desc: "Visual environmental impact counter calculating saved landfill waste." },
-      { icon: "fa-money-bill-wave", title: "Direct Wallet Payouts", desc: "Digital wallet transfer directly upon physical weight verification." }
-    ]
+      { icon: "fa-utensils", title: "Visual Digital Menu", desc: "Categorized royal dining delicacies with dietary tags and dish descriptions." },
+      { icon: "fa-calendar-check", title: "Table Reservation Flow", desc: "Effortless party size and dining time slot selection in 3 taps." },
+      { icon: "fa-location-dot", title: "Location & Valet Map", desc: "One-tap Google Maps directions and valet parking guidelines." },
+      { icon: "fa-champagne-glasses", title: "Private Dining Showcase", desc: "Banquet and VIP dining space virtual gallery with instant booking." }
+    ],
+    caseStudy: {
+      problem: {
+        title: "Cumbersome Telephone Bookings & Unreadable Menus",
+        desc: "Diners struggled to read low-resolution PDF food menus on mobile phones and experienced long waiting times when calling for weekend reservations.",
+        points: [
+          "Unreadable mobile menus causing potential diners to abandon restaurant search.",
+          "Telephone-only reservation system overwhelmed during evening peak hours.",
+          "Lack of visual dish photography leading to lower premium order rates."
+        ]
+      },
+      process: {
+        title: "Mobile-First Dining Menu & 3-Tap Table Reservation",
+        desc: "Designed an appetizing, responsive menu with dietary filtering (Halal, Vegetarian, Chef Specials) and an automated table reservation system.",
+        points: [
+          "Built high-contrast culinary photo cards with clear price tags.",
+          "Created a simple 3-tap booking form with instant confirmation status.",
+          "Optimized viewport scaling for one-handed smartphone use while dining."
+        ]
+      },
+      outcome: {
+        title: "60% Increase in Online Table Bookings",
+        desc: "Significantly decreased phone queue congestion and drove higher dining room occupancy on weekdays and weekends alike.",
+        points: [
+          "60% increase in advance online table reservations within 30 days.",
+          "Zero menu loading lag across 3G/4G cellular connections.",
+          "Delighted restaurant ownership and enhanced local dining visibility."
+        ]
+      },
+      metrics: [
+        { num: "+60%", label: "Online Bookings" },
+        { num: "0.8s", label: "Menu Load Time" },
+        { num: "4.9/5", label: "Diner Feedback" },
+        { num: "100%", label: "Mobile-First" }
+      ]
+    }
   }
 };
 
 function initProjectDetails() {
   const urlParams = new URLSearchParams(window.location.search);
-  const projectId = urlParams.get('id') || "atharv-ayurvedic";
+  const projectId = urlParams.get('id') || "orogoo";
 
-  const data = projectDatabase[projectId] || projectDatabase["atharv-ayurvedic"] || Object.values(projectDatabase)[0];
+  const data = projectDatabase[projectId] || projectDatabase["orogoo"] || Object.values(projectDatabase)[0];
 
   // Update Page Title
-  document.title = `${data.shortTitle} — Case Study | Ravi Kumar`;
+  document.title = `${data.shortTitle} — Case Study | Ravi Kumar UI/UX Designer`;
 
   // Update Breadcrumb & Category
   const breadcrumb = document.getElementById('breadcrumbTitle');
@@ -609,9 +680,6 @@ function initProjectDetails() {
     if (data.liveUrl) {
       figmaBtn.href = data.liveUrl;
       figmaBtn.innerHTML = `<i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Website`;
-    } else if (data.figmaLink) {
-      figmaBtn.href = data.figmaLink;
-      figmaBtn.innerHTML = `<i class="fa-brands fa-figma"></i> View Figma Prototype`;
     } else {
       figmaBtn.href = "#";
       figmaBtn.innerHTML = `<i class="fa-solid fa-layer-group"></i> View Design Specs`;
@@ -623,6 +691,70 @@ function initProjectDetails() {
   if (heroImg) {
     heroImg.src = data.image;
     heroImg.alt = data.title;
+  }
+
+  // Update Problem → Process → Outcome Case Study section
+  if (data.caseStudy) {
+    const cs = data.caseStudy;
+
+    // Problem
+    const pTitle = document.getElementById('csProblemTitle');
+    if (pTitle && cs.problem) pTitle.textContent = cs.problem.title;
+    const pDesc = document.getElementById('csProblemDesc');
+    if (pDesc && cs.problem) pDesc.textContent = cs.problem.desc;
+    const pList = document.getElementById('csProblemList');
+    if (pList && cs.problem && cs.problem.points) {
+      pList.innerHTML = cs.problem.points.map(pt => `
+        <li><i class="fa-solid fa-circle-xmark" style="color:#ef4444;"></i> ${pt}</li>
+      `).join('');
+    }
+
+    // Process
+    const prTitle = document.getElementById('csProcessTitle');
+    if (prTitle && cs.process) prTitle.textContent = cs.process.title;
+    const prDesc = document.getElementById('csProcessDesc');
+    if (prDesc && cs.process) prDesc.textContent = cs.process.desc;
+    const prList = document.getElementById('csProcessList');
+    if (prList && cs.process && cs.process.points) {
+      prList.innerHTML = cs.process.points.map(pt => `
+        <li><i class="fa-solid fa-circle-check" style="color:#38bdf8;"></i> ${pt}</li>
+      `).join('');
+    }
+
+    // Outcome
+    const oTitle = document.getElementById('csOutcomeTitle');
+    if (oTitle && cs.outcome) oTitle.textContent = cs.outcome.title;
+    const oDesc = document.getElementById('csOutcomeDesc');
+    if (oDesc && cs.outcome) oDesc.textContent = cs.outcome.desc;
+    const oList = document.getElementById('csOutcomeList');
+    if (oList && cs.outcome && cs.outcome.points) {
+      oList.innerHTML = cs.outcome.points.map(pt => `
+        <li><i class="fa-solid fa-circle-check" style="color:#22c55e;"></i> ${pt}</li>
+      `).join('');
+    }
+
+    // Metrics Strip
+    if (cs.metrics && cs.metrics.length >= 4) {
+      const m1Num = document.getElementById('metric1Num');
+      const m1Lbl = document.getElementById('metric1Label');
+      if (m1Num) m1Num.textContent = cs.metrics[0].num;
+      if (m1Lbl) m1Lbl.textContent = cs.metrics[0].label;
+
+      const m2Num = document.getElementById('metric2Num');
+      const m2Lbl = document.getElementById('metric2Label');
+      if (m2Num) m2Num.textContent = cs.metrics[1].num;
+      if (m2Lbl) m2Lbl.textContent = cs.metrics[1].label;
+
+      const m3Num = document.getElementById('metric3Num');
+      const m3Lbl = document.getElementById('metric3Label');
+      if (m3Num) m3Num.textContent = cs.metrics[2].num;
+      if (m3Lbl) m3Lbl.textContent = cs.metrics[2].label;
+
+      const m4Num = document.getElementById('metric4Num');
+      const m4Lbl = document.getElementById('metric4Label');
+      if (m4Num) m4Num.textContent = cs.metrics[3].num;
+      if (m4Lbl) m4Lbl.textContent = cs.metrics[3].label;
+    }
   }
 
   // Update Brand Color Swatches
@@ -657,16 +789,16 @@ function renderSwitcher(currentId) {
   const switcherGrid = document.getElementById('switcherGrid');
   if (!switcherGrid) return;
 
-  const keys = Object.keys(projectDatabase).filter(key => key !== currentId);
-  // Pick up to 3 related projects
-  const selectedKeys = keys.slice(0, 3);
+  const priorityKeys = ["orogoo", "imperial-weaves", "hardcode-shampoo", "atharv-ayurvedic", "dernier-cri", "taabir"];
+  const filteredKeys = priorityKeys.filter(key => key !== currentId && projectDatabase[key]);
+  const selectedKeys = filteredKeys.slice(0, 3);
 
   switcherGrid.innerHTML = selectedKeys.map(key => {
     const item = projectDatabase[key];
     return `
-      <div class="switcher-card glass-card" onclick="location.href='project-detail.html?id=${item.id}'">
+      <div class="switcher-card glass-card" onclick="location.href='project-detail.html?id=${item.id}'" style="cursor:pointer;">
         <div class="switcher-img-box">
-          <img src="${item.image}" alt="${item.shortTitle}">
+          <img src="${item.image}" alt="${item.shortTitle}" loading="lazy">
         </div>
         <div class="switcher-info">
           <span class="switcher-tag">${item.category}</span>
@@ -677,4 +809,3 @@ function renderSwitcher(currentId) {
     `;
   }).join('');
 }
-

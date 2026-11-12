@@ -242,6 +242,48 @@ body.contact-page {
     transform: translateX(4px);
 }
 
+/* ── WhatsApp / Outline CTA Button ───────────────────────── */
+.r-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.r-btn-outline {
+    background: transparent;
+    border: 2px solid #22c55e;
+    color: #22c55e !important;
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.15);
+    margin-top: 24px;
+}
+
+.r-btn-outline:hover {
+    background: #22c55e;
+    color: #ffffff !important;
+    box-shadow: 0 10px 28px rgba(34, 197, 94, 0.45);
+    transform: translateY(-2px);
+}
+
+.r-btn-outline i {
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.r-btn-outline:hover i {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+
 /* Floating Glass Contact Info Card */
 .contact-info-glass-card {
     padding: clamp(28px, 4vw, 40px);

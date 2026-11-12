@@ -17,24 +17,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Copy email event listener
+// Copy to clipboard — handles both .copy-email and .copy-number
 document.addEventListener('DOMContentLoaded', () => {
-  const copyElements = document.querySelectorAll('.copy-email');
-  copyElements.forEach(item => {
-    item.addEventListener('click', () => {
-      const email = item.getAttribute('data-email') || '7055ravikumar@gmail.com';
-      navigator.clipboard.writeText(email);
-      const btn = item.querySelector('.copy-btn');
-      const span = item.querySelector('span');
-      if (btn) {
-        const oldText = btn.textContent;
-        btn.textContent = 'Copied!';
-        setTimeout(() => btn.textContent = oldText, 2000);
-      } else if (span) {
-        const originalText = span.textContent;
-        span.textContent = 'Copied to clipboard!';
-        setTimeout(() => span.textContent = originalText, 2000);
-      }
+  const copyConfigs = [
+    { selector: '.copy-email',  dataAttr: 'data-email',  fallback: '7055ravikumar@gmail.com' },
+    { selector: '.copy-number', dataAttr: 'data-number', fallback: '7055522514' },
+  ];
+
+  copyConfigs.forEach(({ selector, dataAttr, fallback }) => {
+    document.querySelectorAll(selector).forEach(item => {
+      item.addEventListener('click', () => {
+        const value = item.getAttribute(dataAttr) || fallback;
+        navigator.clipboard.writeText(value);
+
+        const btn  = item.querySelector('.copy-btn');
+        const span = item.querySelector('span');
+        const target = btn || span;
+
+        if (target) {
+          const originalText = target.textContent;
+          target.textContent = btn ? 'Copied!' : 'Copied to clipboard!';
+          setTimeout(() => target.textContent = originalText, 2000);
+        }
+      });
     });
   });
 });
@@ -190,23 +195,33 @@ if (canvas && ctx) {
 
 const projects = [
   {
-    id: "empros",
-    title: "Empros",
+    id: "orogoo",
+    title: "Orogoo Job Portal",
     category: "uiux",
-    image: "images/Empros.png",
-    description: "Global logistics, ocean freight management, and industrial business service web portal.",
-    tags: ["Global Logistics", "Freight Tracking", "Corporate UI"],
-    liveUrl: "https://empros.in/",
+    image: "images/orogoos.png",
+    description: "Short-term job discovery & shift hiring platform with 40% faster application flow and candidate search dashboards.",
+    tags: ["Job Portal", "Gig Economy", "UI/UX Design", "Angular"],
+    liveUrl: "https://orogoo.com/#/home",
     featured: true
   },
   {
-    id: "tuespot",
-    title: "TueSpot Solutions",
+    id: "imperial-weaves",
+    title: "Imperial Weaves",
     category: "uiux",
-    image: "images/TueSpot Solutions.png",
-    description: "Responsive UI screens and user flows for quick task discovery.",
-    tags: ["UI/UX Design", "Website Design", "Angular"],
-    liveUrl: "https://tuespotsolutions.com/web/#/home",
+    image: "images/Imperial weaves.png",
+    description: "Luxury Kashmiri handloom saree & heritage textile storefront with 35% higher checkout conversion.",
+    tags: ["Handloom Textiles", "E-Commerce", "Luxury Fashion"],
+    liveUrl: "https://imperialweaves.com/",
+    featured: true
+  },
+  {
+    id: "hardcode-shampoo",
+    title: "Hardcode Shampoo",
+    category: "uiux",
+    image: "images/Hardcode.png",
+    description: "Conversion-engineered D2C men's grooming storefront with streamlined 2-step checkout flow.",
+    tags: ["Men's Grooming", "E-Commerce", "UI/UX"],
+    liveUrl: "https://www.hardcodeshampoo.com/",
     featured: true
   },
   {
@@ -220,23 +235,13 @@ const projects = [
     featured: true
   },
   {
-    id: "dernier-cri",
-    title: "Dernier Cri",
+    id: "empros",
+    title: "Empros",
     category: "uiux",
-    image: "images/Derniercri.png",
-    description: "High-end luxury event management, couture fashion, and digital branding showcase platform.",
-    tags: ["Event Management", "Luxury Apparel", "Digital Magic"],
-    liveUrl: "https://derniercri.in/",
-    featured: true
-  },
-  {
-    id: "taabir",
-    title: "Taabir",
-    category: "uiux",
-    image: "images/Taabir.png",
-    description: "Luxury Indian label & boutique fashion store website with responsive shopping user experience.",
-    tags: ["Luxury Ethnic", "Boutique Store", "Web Design"],
-    liveUrl: "https://taabir.in/",
+    image: "images/Empros.png",
+    description: "Global logistics, ocean freight management, and industrial business service web portal.",
+    tags: ["Global Logistics", "Freight Tracking", "Corporate UI"],
+    liveUrl: "https://empros.in/",
     featured: true
   },
   {
@@ -534,7 +539,7 @@ function handleFileSelect(event) {
 function processSelectedFile(file) {
   const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
   const ext = file.name.split('.').pop().toLowerCase();
-  
+
   if (!validTypes.includes(file.type) && !['pdf', 'doc', 'docx'].includes(ext)) {
     showToast('Invalid file format. Please upload a PDF, DOC, or DOCX file.', 'error');
     return;
@@ -568,7 +573,7 @@ function saveUploadedResume() {
   if (!currentResumeFile) return;
 
   const reader = new FileReader();
-  reader.onload = function(e) {
+  reader.onload = function (e) {
     try {
       localStorage.setItem('custom_resume_data', e.target.result);
       localStorage.setItem('custom_resume_filename', currentResumeFile.name);
@@ -629,14 +634,90 @@ function showToast(message, type = 'info') {
 }
 
 
- // Optional: tap-to-toggle for touch devices (no hover support)
-  document.querySelectorAll('.exp-deck-card').forEach(card => {
-    card.addEventListener('click', () => {
-      document.querySelectorAll('.exp-deck-card').forEach(c => {
-        if (c !== card) c.classList.remove('active');
-      });
-      card.classList.toggle('active');
+// Optional: tap-to-toggle for touch devices (no hover support)
+document.querySelectorAll('.exp-deck-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.exp-deck-card').forEach(c => {
+      if (c !== card) c.classList.remove('active');
     });
+    card.classList.toggle('active');
+  });
+});
+
+
+
+
+
+
+
+
+
+(function () {
+  var stage = document.getElementById('tcfStage');
+  var cards = Array.prototype.slice.call(stage.querySelectorAll('.testimonial-card'));
+  var dotsWrap = document.getElementById('tcfDots');
+  var n = cards.length;
+  var AUTOPLAY_MS = 5000; // 0 turns autoplay off
+  var active = 0, timer = null;
+
+  var dots = cards.map(function (_, i) {
+    var b = document.createElement('button');
+    b.className = 'tcf-dot';
+    b.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+    b.onclick = function () { goTo(i); restart(); };
+    dotsWrap.appendChild(b);
+    return b;
   });
 
-  
+  function render() {
+    var mobile = window.innerWidth <= 640;
+    var gap = mobile ? 175 : 290;   // distance between cards
+    var half = Math.floor(n / 2);
+    cards.forEach(function (card, i) {
+      var o = ((i - active + n + half) % n) - half;
+      var abs = Math.abs(o);
+      card.style.transform = 'translateX(' + (o * gap) + 'px) scale(' + (1 - abs * 0.14) + ')';
+      card.style.zIndex = 10 - abs;
+      card.style.opacity = abs > 2 ? 0 : 1;
+      card.style.filter = abs === 0 ? 'none' : 'brightness(.55) blur(1px)';
+      card.style.pointerEvents = abs > 2 ? 'none' : 'auto';
+      card.classList.toggle('is-active', abs === 0);
+    });
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === active); });
+  }
+
+  function goTo(i) { active = (i + n) % n; render(); }
+  function autoplay() { if (AUTOPLAY_MS) timer = setInterval(function () { goTo(active + 1); }, AUTOPLAY_MS); }
+  function restart() { clearInterval(timer); autoplay(); }
+
+  document.getElementById('tcfPrev').onclick = function () { goTo(active - 1); restart(); };
+  document.getElementById('tcfNext').onclick = function () { goTo(active + 1); restart(); };
+
+  // click a side card to bring it to the center
+  cards.forEach(function (c, i) {
+    c.addEventListener('click', function () { if (i !== active) { goTo(i); restart(); } });
+  });
+
+  // swipe / drag
+  var startX = null;
+  stage.addEventListener('pointerdown', function (e) { startX = e.clientX; clearInterval(timer); });
+  stage.addEventListener('pointerup', function (e) {
+    if (startX === null) return;
+    var dx = e.clientX - startX;
+    if (Math.abs(dx) > 50) goTo(active + (dx < 0 ? 1 : -1));
+    startX = null; autoplay();
+  });
+  stage.addEventListener('pointerleave', function () { startX = null; });
+
+  // pause on hover, keyboard arrows
+  stage.addEventListener('mouseenter', function () { clearInterval(timer); });
+  stage.addEventListener('mouseleave', function () { clearInterval(timer); autoplay(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') goTo(active - 1);
+    if (e.key === 'ArrowRight') goTo(active + 1);
+  });
+  window.addEventListener('resize', render);
+
+  render();
+  autoplay();
+})();

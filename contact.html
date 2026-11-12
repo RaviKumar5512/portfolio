@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Contact Ravi Kumar — UI/UX Designer & Web Designer. Available for freelance design, design systems, and frontend engineering roles.">
   <title>Contact Me — Ravi Kumar | UI/UX Designer & Web Designer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contact.css">
   <!-- Google Fonts -->
@@ -38,8 +41,9 @@
       <a href="contact.html" class="active">Contact</a>
     </nav>
     <div class="nav-right-actions">
-      <button onclick="downloadResume()" class="btn-resume-nav"><i class="fa-solid fa-download"></i> Resume</button>
-      <a href="contact.html" class="btn-touch">Get in touch <span class="arrow"><i class="bi bi-arrow-right"></i></span></a>
+      <!-- <button onclick="downloadResume()" class="btn-resume-nav"><i class="fa-solid fa-download"></i> Resume</button> -->
+      <a href="contact.html" class="btn-touch">Get in touch <span class="arrow"><i
+            class="bi bi-arrow-right"></i></span></a>
     </div>
   </header>
 
@@ -84,30 +88,30 @@
             <p>Fill out the form below with your project scope, timeline, and goals.</p>
           </div>
 
-          <form class="contact-main-form"
-            onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.');">
+          <form class="contact-main-form" id="portfolioContactForm" action="https://formspree.io/f/mqkvrkzz"
+            method="POST">
             <div class="c-form-grid">
-              
+
               <div class="c-field">
-                <label>Name</label>
-                <input type="text" placeholder="Your Full Name" required>
+                <label for="formName">Name <span style="color:#ff5e36;">*</span></label>
+                <input type="text" id="formName" name="name" placeholder="Your Full Name" required>
               </div>
 
               <div class="c-field">
-                <label>Email Address</label>
-                <input type="email" placeholder="john@example.com" required>
+                <label for="formEmail">Email Address <span style="color:#ff5e36;">*</span></label>
+                <input type="email" id="formEmail" name="email" placeholder="john@example.com" required>
               </div>
 
               <div class="c-field">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="Add Number">
+                <label for="formPhone">Phone Number</label>
+                <input type="tel" id="formPhone" name="phone" placeholder="+91 98765 43210">
               </div>
 
               <div class="field">
                 <label>Budget</label>
                 <div class="multi-select">
                   <div class="select-wrapper">
-                    <input type="text" class="select" name="select" value="Option 1" readonly>
+                    <input type="text" class="select" id="formBudget" name="budget" value="Under $1,000" readonly>
                   </div>
                   <div class="options">
                     <p class="item active">Under $1,000</p>
@@ -122,7 +126,8 @@
                 <label>Timeline</label>
                 <div class="multi-select">
                   <div class="select-wrapper">
-                    <input type="text" class="select" name="select" value="Less than 2 weeks" readonly>
+                    <input type="text" class="select" id="formTimeline" name="timeline" value="Less than 2 weeks"
+                      readonly>
                   </div>
                   <div class="options">
                     <p class="item active">Less than 2 weeks</p>
@@ -131,21 +136,32 @@
                     <p class="item">Flexible</p>
                   </div>
                 </div>
-
               </div>
+
               <div class="c-field full-width">
-                <label>Project Details / Comments</label>
-                <textarea rows="5"
-                  placeholder="Tell me about your product vision, key features, or what help you need..."
+                <label for="formMessage">Project Details / Scope <span style="color:#ff5e36;">*</span></label>
+                <textarea rows="5" id="formMessage" name="message"
+                  placeholder="Tell me about your product vision, key features, target deadline, or role requirements..."
                   required></textarea>
               </div>
 
             </div>
 
-            <button type="submit" class="c-submit-btn">
-              <span>Send Message</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
+            <!-- Form Status Alert Box -->
+            <div id="formStatusMsg"
+              style="display:none; padding:12px 16px; border-radius:10px; margin-bottom:16px; font-size:0.9rem;"></div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+              <button type="submit" class="c-submit-btn" id="contactSubmitBtn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <a href="https://wa.me/917055522514?text=Hi%20Ravi,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project"
+                target="_blank" rel="noopener" class="r-btn r-btn-outline">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
           </form>
         </div>
 
@@ -173,14 +189,15 @@
             </div>
 
             <!-- Phone Item -->
-            <div class="info-item-row">
+            <div class="info-item-row copy-number" data-email="7055522514">
               <div class="info-item-icon">
                 <i class="fa-solid fa-phone"></i>
               </div>
               <div class="info-item-content">
                 <span class="info-item-label">Phone / WhatsApp</span>
-                <span class="info-item-val">+91 70555 22514</span>
+                <span class="info-item-val" id="contactNumber">+91 70555 22514</span>
               </div>
+              <button class="copy-mini-btn">Copy</button>
             </div>
 
             <!-- Location Item -->
@@ -190,7 +207,7 @@
               </div>
               <div class="info-item-content">
                 <span class="info-item-label">Location</span>
-                <span class="info-item-val">Chandigarh, ITBP Behalana, India</span>
+                <span class="info-item-val">Chandigarh, India</span>
               </div>
             </div>
 
@@ -210,20 +227,25 @@
           <div class="social-connect-box">
             <span class="social-connect-title">Social Profiles & Resume</span>
             <div class="social-icons-row">
-              <a href="https://linkedin.com/in/ravi-kumar-842b02250" target="_blank" class="social-circle-btn" title="LinkedIn Profile"><i
-                  class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/ravi-kumar-842b02250" target="_blank" rel="noopener"
+                class="social-circle-btn" title="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/RaviKumar5512/ravi_portfolio" target="_blank" rel="noopener"
+                class="social-circle-btn" title="GitHub Profile"><i class="fab fa-github"></i></a>
               <a href="mailto:7055ravikumar@gmail.com" class="social-circle-btn" title="Email Me"><i
                   class="fa-regular fa-envelope"></i></a>
-              <a href="tel:7055522514" class="social-circle-btn" title="Call Me"><i class="fa-solid fa-phone"></i></a>
+              <a href="tel:+917055522514" class="social-circle-btn" title="Call Me"><i
+                  class="fa-solid fa-phone"></i></a>
             </div>
 
             <div class="contact-resume-actions" style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-              <button onclick="downloadResume()" class="r-hero-btn primary" style="padding:8px 16px; font-size:0.85rem;">
+              <a href="resume.html" class="r-hero-btn primary"
+                style="padding:8px 16px; font-size:0.85rem; text-decoration:none;">
+                <i class="fa-solid fa-file-lines"></i> View Resume
+              </a>
+              <button onclick="downloadResume()" class="r-hero-btn outline"
+                style="padding:8px 16px; font-size:0.85rem;">
                 <i class="fa-solid fa-download"></i> Download CV
               </button>
-              <!-- <button onclick="openResumeUploadModal()" class="r-hero-btn outline" style="padding:8px 16px; font-size:0.85rem;">
-                <i class="fa-solid fa-upload"></i> Upload CV
-              </button> -->
             </div>
           </div>
         </div>
@@ -348,12 +370,12 @@
 
       <footer class="site-footer">
         <div class="footer-container">
-           <div class="connect-let">
+          <div class="connect-let">
             <span class="section-tag">Let's Connect</span>
             <h2 class="contact-heading">Let's Build Something Meaningful Together</h2>
           </div>
           <div class="footer-top-grid">
-            
+
             <!-- Column 1: Brand & Bio -->
             <div class="footer-brand-col">
               <h3 class="footer-logo">Ravi<span>.Portfolio</span></h3>
@@ -378,8 +400,10 @@
             <div>
               <h4 class="footer-heading">SOCIAL</h4>
               <ul class="footer-links">
-                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/ravi-kumar-842b02250" target="_blank"
+                    rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/RaviKumar5512/ravi_portfolio" target="_blank" rel="noopener">GitHub</a>
+                </li>
               </ul>
             </div>
 
@@ -388,6 +412,7 @@
               <h4 class="footer-heading">DIRECT</h4>
               <div class="footer-direct-info">
                 <a href="mailto:7055ravikumar@gmail.com" class="footer-email">7055ravikumar@gmail.com</a>
+                <a href="tel:+917055522514" class="footer-email">+91 70555 22514</a>
                 <p class="footer-location">Chandigarh, India</p>
               </div>
             </div>
@@ -398,8 +423,9 @@
 
           <!-- Bottom Bar -->
           <div class="footer-bottom-bar">
-            <p class="footer-copyright>© 2026 Ravi Kumar. All rights reserved.</p>
-            <a href="#" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            <p class="footer-copyright">© 2026 Ravi Kumar. All rights reserved.</p>
+            <a href="#" class="footer-back-to-top"
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
               Back to top <span class="arrow">↑</span>
             </a>
           </div>
@@ -434,7 +460,8 @@
             <span id="previewFileSize">240 KB</span>
           </div>
         </div>
-        <button class="btn-remove-file" onclick="resetUploadedResume()" title="Remove file"><i class="fa-solid fa-trash-can"></i></button>
+        <button class="btn-remove-file" onclick="resetUploadedResume()" title="Remove file"><i
+            class="fa-solid fa-trash-can"></i></button>
       </div>
 
       <div class="modal-footer-actions">

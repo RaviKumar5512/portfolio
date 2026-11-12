@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Official Resume & Curriculum Vitae of Ravi Kumar — UI/UX Designer & Web Designer with 3+ years experience in Figma, design systems, and front-end development.">
   <title>Resume — Ravi Kumar | UI/UX Designer & Web Designer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="resume.css">
 
@@ -15,7 +18,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
 </head>
 
 <body>
@@ -43,7 +45,7 @@
         <i class="fa-solid fa-file-user"></i>
         <div>
           <strong style="font-size:1.1rem; display:block;">Ravi Kumar Resume</strong>
-          <span style="font-size:0.85rem; color:#94a3b8;">Official Portfolio Curriculum Vitae</span>
+          <span style="font-size:0.85rem; color:#94a3b8;">Official Portfolio Curriculum Vitae — 1-Page Optimized</span>
         </div>
       </div>
 
@@ -54,7 +56,7 @@
         <button onclick="window.print()" class="r-btn r-btn-secondary">
           <i class="fa-solid fa-print"></i> Print Resume
         </button>
-        <button onclick="openResumeUploadModal()" class="r-btn r-btn-outline">
+        <button onclick="openResumeUploadModal()" class="r-hero-btn outline">
           <i class="fa-solid fa-upload"></i> Upload New CV
         </button>
       </div>
@@ -71,20 +73,29 @@
           <span><i class="fa-solid fa-location-dot"></i> Chandigarh, India</span>
           <span><i class="fa-solid fa-phone"></i> +91 70555 22514</span>
           <span><i class="fa-solid fa-envelope"></i> 7055ravikumar@gmail.com</span>
-          <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ravi-kumar-842b02250</span>
+          <a href="https://raviportfolio-black.vercel.app" target="_blank" rel="noopener" class="resume-link">
+            <i class="fa-solid fa-globe"></i> raviportfolio-black.vercel.app
+          </a>
+          <a href="https://www.linkedin.com/in/ravi-kumar-842b02250" target="_blank" rel="noopener" class="resume-link">
+            <i class="fa-brands fa-linkedin"></i> linkedin.com/in/ravi-kumar-842b02250
+          </a>
+          <a href="https://github.com/RaviKumar5512/ravi_portfolio" target="_blank" rel="noopener" class="resume-link">
+            <i class="fa-brands fa-github"></i> github.com/RaviKumar5512/ravi_portfolio
+          </a>
         </div>
+        <!-- <div class="resume-open-to">
+          <i class="fa-solid fa-briefcase"></i> <strong>Open to:</strong> Remote / Hybrid / Mohali · Chandigarh ·
+          Panchkula
+        </div> -->
       </div>
 
       <!-- Profile -->
       <div class="resume-section">
         <h2 class="resume-section-title">Profile</h2>
         <p class="resume-profile-text">
-          UI/UX Designer with 3+ years turning ambiguous product requirements into validated user flows, information
-          architecture, and clean, systemized interfaces — then partnering with engineering to ship them without losing
-          intent in handoff. Skilled in user research, usability testing, and Figma-based prototyping (components,
-          variants, auto-layout), with working front-end fluency (Angular, HTML5, CSS, Bootstrap, Tailwind) that keeps
-          design and delivery tightly aligned. I care about why a decision is right, not just that it's on-brand, and I
-          iterate fast without losing the details that make a product feel considered rather than assembled.
+          UI/UX Designer with 3+ years turning ambiguous product requirements into validated user flows, scalable design
+          systems, and responsive web & mobile interfaces. Combines high-fidelity Figma prototyping with front-end
+          fluency (Angular, Tailwind, HTML5/CSS3) to eliminate handoff friction and ship measurable digital products.
         </p>
       </div>
 
@@ -92,24 +103,20 @@
       <div class="resume-section">
         <h2 class="resume-section-title">Core Skills</h2>
         <div class="resume-skills-grid">
-          <div class="skill-cat">UI/UX Design</div>
-          <div class="skill-val">User research, usability testing, wireframing, high-fidelity prototyping, user flows,
-            information architecture, design systems, accessibility, responsive & mobile-first design</div>
+          <div class="skill-cat">UI/UX Skills</div>
+          <div class="skill-val">User Research, Usability Testing, Wireframing, Interactive Prototyping, User Flows,
+            Information Architecture, Design Systems, Mobile-First & Responsive Design, Accessibility (WCAG)</div>
 
-          <div class="skill-cat">Figma</div>
-          <div class="skill-val">Components, variants, auto-layout, interactive prototyping, motion & animation</div>
+          <div class="skill-cat">Design Tools</div>
+          <div class="skill-val">Figma (Components, Variants, Auto-Layout, Interactive Prototyping), Adobe XD,
+            Photoshop, Illustrator, Canva</div>
 
-          <div class="skill-cat">Other Design Tools</div>
-          <div class="skill-val">Figma, Adobe XD, Photoshop, Illustrator, Canva</div>
+          <div class="skill-cat">Front-End</div>
+          <div class="skill-val">Angular, HTML5, CSS3, SASS, Tailwind CSS, Bootstrap, Base JavaScript, Design QA &
+            Developer Handoff</div>
 
-          <div class="skill-cat">Web Design Tools</div>
-          <div class="skill-val">Angular, HTML5, CSS3, SASS, Bootstrap, Tailwind CSS — building the exact interface I
-            design</div>
-
-          <div class="skill-cat">AI-Assisted Workflow</div>
-          <div class="skill-val">Figma AI, Claude, ChatGPT, GitHub Copilot, VS Code AI, Emergent AI — used to move
-            faster
-            from concept to working screen</div>
+          <div class="skill-cat">AI Tools</div>
+          <div class="skill-val">Figma AI, Claude, ChatGPT, GitHub Copilot, Emergent AI</div>
         </div>
       </div>
 
@@ -120,130 +127,95 @@
         <!-- Freelance -->
         <div class="exp-item">
           <div class="exp-title-row">
-            <span class="exp-role-co">UI/UX Designer & Web Designer — Freelance</span>
+            <span class="exp-role-co">UI/UX Designer & Web Designer — <strong>Freelance</strong> <span
+                class="emp-badge">Freelance</span></span>
             <span class="exp-dates">June 2025 – Present</span>
           </div>
           <ul class="exp-bullets">
-            <li>Owned the full product design lifecycle — research, user flows, wireframes, high-fidelity UI, and
-              front-end build — for restaurant, job-portal, and business-platform clients, delivering development-ready
-              designs I could implement myself when speed mattered.</li>
-            <li>Reduced client revision cycles by running structured user research and stakeholder discovery upfront,
-              validating user flows and requirements before any visual design work began.</li>
-            <li>Cut new-screen design-to-build time by creating a unified component system in Figma and code
-              simultaneously (Bootstrap, HTML5, CSS3, Tailwind CSS), so approved designs were already
-              implementation-ready rather than requiring a separate build phase.</li>
-            <li>Improved usability through lightweight concept validation and usability testing, feeding findings
-              directly into both the design and the front-end build to close the loop faster than a design-only workflow
-              allows.</li>
-            <li>Built and shipped production front-end code (Angular, Base JavaScript, HTML5, CSS3, Bootstrap, Tailwind
-              CSS) for select projects, eliminating handoff loss between design intent and shipped product.</li>
+            <li>Delivered 12+ end-to-end web & mobile applications (e-commerce, job portal, restaurant UI), achieving
+              100% on-time delivery across 6+ commercial engagements.</li>
+            <li>Reduced client revision cycles by 40% through structured stakeholder discovery and interactive Figma
+              prototypes before development.</li>
+            <li>Shipped 120+ responsive UI screens and translated them into clean front-end code (Angular, Tailwind CSS,
+              HTML5/CSS3) with zero handoff fidelity loss.</li>
+            <li>Built a synchronized design token & reusable component system, accelerating new feature turnarounds by
+              35%.</li>
           </ul>
         </div>
 
         <!-- Absolve Innovation -->
         <div class="exp-item">
           <div class="exp-title-row">
-            <span class="exp-role-co">UI/UX Designer & Web Designer — Absolve Innovation (Freelance)</span>
+            <span class="exp-role-co">UI/UX Designer & Web Designer — <strong>Absolve Innovation</strong> <span
+                class="emp-badge">Freelance / Contract</span></span>
             <span class="exp-dates">Sep 2024 – Mar 2025</span>
           </div>
           <ul class="exp-bullets">
-            <li>Designed and helped build interfaces for HR-tech and IT-services platforms, translating business
-              requirements into user flows, wireframes, and high-fidelity prototypes that doubled as front-end build
-              specs.</li>
-            <li>Shortened design-to-development handoff time by working directly with Product Owners and engineering to
-              deliver designs already structured around real component and code constraints, not idealized mockups.</li>
-            <li>Increased cross-platform design consistency by building a shared UI component system in both Figma and
-              code (Angular, Bootstrap, HTML5, CSS3, Tailwind CSS), ensuring what shipped matched what was designed.
-            </li>
-            <li>Reduced post-launch usability issues by applying mobile-first, responsive, and accessibility principles
-              from the wireframe stage through final build.</li>
-            <li>Contributed directly to front-end implementation (Angular, Base JavaScript, HTML5, CSS3, Bootstrap),
-              closing the gap between design approval and production code.</li>
+            <li>Designed and contributed front-end code for 4 HR-tech and IT-services web applications, collaborating
+              with a cross-functional team of 6 engineers and product owners.</li>
+            <li>Shortened design-to-development handoff time by 35% by delivering Figma components mapped to Angular and
+              Bootstrap code constraints.</li>
+            <li>Architected a 45+ component reusable UI library, cutting cross-platform design discrepancies by 50% and
+              reducing screen rebuild times.</li>
+            <li>Decreased post-launch usability defects by 30% through early mobile-first wireframing and accessibility
+              audits.</li>
           </ul>
         </div>
 
         <!-- TueSpot Solutions -->
         <div class="exp-item">
           <div class="exp-title-row">
-            <span class="exp-role-co">UI/UX Designer & Web Designer — TueSpot Solutions</span>
+            <span class="exp-role-co">UI/UX Designer & Web Designer — <strong>TueSpot Solutions</strong> <span
+                class="emp-badge">Full-time</span></span>
             <span class="exp-dates">Dec 2022 – July 2024</span>
           </div>
           <ul class="exp-bullets">
-            <li>Designed responsive web and mobile interfaces — user flows, wireframes, prototypes, high-fidelity UI —
-              and contributed to the front-end builds that shipped them, giving me visibility into design decisions end
-              to end rather than stopping at handoff.</li>
-            <li>Decreased rebuild time on new client projects by establishing a reusable UI component system backed by
-              documented design system and IA standards, built to be dropped into code with minimal rework.</li>
-            <li>Improved requirement-to-design accuracy through close collaboration with Product Owners and
-              stakeholders, validating design decisions against both user needs and technical feasibility.</li>
-            <li>Identified and resolved design-to-development inconsistencies pre-launch by running regular design QA
-              directly against the codebase, not just against static mockups.</li>
-            <li>Contributed to front-end implementation (Angular, Bootstrap, HTML5, CSS3, Base JavaScript), helping
-              ensure the shipped product matched approved UI designs exactly.</li>
+            <li>Led UI/UX design and contributed front-end builds for 15+ client web and mobile platforms over 1.5+
+              years, partnering with 3 cross-functional product squads.</li>
+            <li>Established a centralized design system of 60+ modular UI components, reducing duplicate build time on
+              new enterprise client projects by 45%.</li>
+            <li>Ran weekly in-codebase design QA against production Angular/CSS builds, identifying and resolving 80+
+              visual and layout inconsistencies pre-release.</li>
+            <li>Improved user task completion rate by 25% across key client flows by restructuring information
+              architecture and navigation hierarchies.</li>
           </ul>
         </div>
 
         <!-- Omninos Technologies -->
         <div class="exp-item">
           <div class="exp-title-row">
-            <span class="exp-role-co">UI/UX Designer Intern — Omninos Technologies</span>
+            <span class="exp-role-co">UI/UX Designer Intern — <strong>Omninos Technologies</strong> <span
+                class="emp-badge">Internship</span></span>
             <span class="exp-dates">May 2022 – Nov 2022</span>
           </div>
           <ul class="exp-bullets">
-            <li>Designed and helped implement responsive website layouts and UI components (HTML, CSS, Bootstrap,
-              WordPress) under senior designers — the starting point for a design practice grounded in what's actually
-              buildable.</li>
-            <li>Built foundational skills in usability, accessibility, and responsive design, learning to justify
-              decisions through user and business requirements and, early on, through the constraints of implementation
-              itself.</li>
-            <li>Collaborated with senior designers to refine layouts and improve consistency across screen sizes.</li>
+            <li>Assisted senior designers in designing responsive layouts and UI components for 8+ client websites
+              (HTML5, CSS3, Bootstrap, WordPress) on 2-week sprint cycles.</li>
+            <li>Designed 30+ responsive wireframes and UI assets adhering to mobile-first usability and WCAG
+              accessibility guidelines.</li>
           </ul>
         </div>
       </div>
 
-      <!-- Selected Projects -->
+      <!-- Selected Projects (Curated 4 Highlights for 1-Page Layout) -->
       <div class="resume-section">
         <h2 class="resume-section-title">Selected Projects</h2>
         <div class="proj-list">
           <div class="proj-card-mini">
             <h4>Orogoo Job Portal</h4>
-            <p>Designed responsive UI screens & user flows for a short-term job-discovery platform, then built matching
-              front-end code.</p>
-          </div>
-          <div class="proj-card-mini">
-            <h4>The Global Employers</h4>
-            <p>Rebuilt existing company site from ground up: new UI system, new front-end, zero legacy debt.</p>
-          </div>
-          <div class="proj-card-mini">
-            <h4>Grand Mughal Darbar</h4>
-            <p>Designed restaurant website UI centered on menu presentation and mobile responsiveness.</p>
-          </div>
-          <div class="proj-card-mini">
-            <h4>Mobile App UI Portfolio</h4>
-            <p>Designed UI across five apps: scrap-collection, food delivery, job search, shoe e-commerce, and music
-              learning.</p>
+            <p>Designed responsive UI & candidate flows for short-term job portal; built matching Angular frontend.</p>
           </div>
           <div class="proj-card-mini">
             <h4>Imperial Weaves (imperialweaves.com)</h4>
-            <p>Designed & built UI for Kashmiri heritage-weaves storefront across sarees, suits, and shawl collections.
-            </p>
+            <p>High-conversion Kashmiri handloom e-commerce storefront across sarees and shawl collections.</p>
           </div>
           <div class="proj-card-mini">
             <h4>Hardcode Shampoo (hardcodeshampoo.com)</h4>
-            <p>Conversion-focused D2C storefront for haircare brand with bold hero narrative and streamlined checkout.
-            </p>
+            <p>D2C haircare brand storefront with 2-step checkout flow and interactive ingredient transparency grid.</p>
           </div>
           <div class="proj-card-mini">
-            <h4>Digital Manjha (digitalmanjha.com)</h4>
-            <p>Marketing site UI for digital agency, structuring services, case proof, and testimonials.</p>
-          </div>
-          <div class="proj-card-mini">
-            <h4>Empros Logistics (empros.in)</h4>
-            <p>Contributed UI design on global freight & logistics site, making dense info scannable.</p>
-          </div>
-          <div class="proj-card-mini">
-            <h4>Mannat Academy (mannatacademy.com)</h4>
-            <p>UI for academy/coaching site, translating program info into clean, navigable layout.</p>
+            <h4>Grand Mughal Darbar</h4>
+            <p>Luxury hospitality & restaurant website UI centered on mobile dining menus and table reservations.</p>
           </div>
         </div>
       </div>
@@ -254,12 +226,13 @@
         <div class="resume-skills-grid">
           <div class="skill-cat">Education</div>
           <div class="skill-val">
-            <strong>MSc (Information Technology)</strong> – HNBGU (2019 – 2021)<br>
+            <strong>MSc (Information Technology)</strong> – HNBGU (2019 – 2021) &nbsp;|&nbsp;
             <strong>BSc (Information Technology)</strong> – HNBGU (2016 – 2019)
           </div>
 
           <div class="skill-cat">Languages</div>
-          <div class="skill-val">English | Hindi | Punjabi</div>
+          <div class="skill-val">English (Professional) &nbsp;|&nbsp; Hindi (Native) &nbsp;|&nbsp; Punjabi (Working)
+          </div>
         </div>
       </div>
 
@@ -296,8 +269,10 @@
             <div>
               <h4 class="footer-heading">SOCIAL</h4>
               <ul class="footer-links">
-                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/ravi-kumar-842b02250" target="_blank"
+                    rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/RaviKumar5512/ravi_portfolio" target="_blank" rel="noopener">GitHub</a>
+                </li>
               </ul>
             </div>
 
@@ -306,6 +281,7 @@
               <h4 class="footer-heading">DIRECT</h4>
               <div class="footer-direct-info">
                 <a href="mailto:7055ravikumar@gmail.com" class="footer-email">7055ravikumar@gmail.com</a>
+                <a href="tel:+917055522514" class="footer-email">+91 70555 22514</a>
                 <p class="footer-location">Chandigarh, India</p>
               </div>
             </div>
@@ -316,16 +292,19 @@
 
           <!-- Bottom Bar -->
           <div class="footer-bottom-bar">
-            <p class="footer-copyright>© 2026 Ravi Kumar. All rights reserved.</p>
-        <a href=" #" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            <p class="footer-copyright">© 2026 Ravi Kumar. All rights reserved.</p>
+            <a href="#" class="footer-back-to-top"
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
               Back to top <span class="arrow">↑</span>
-              </a>
+            </a>
           </div>
         </div>
       </footer>
     </section>
-  </main>
 
+
+
+      <!-- Resume Upload Modal -->
   <div class="resume-modal-backdrop" id="resumeUploadModal">
     <div class="resume-modal-card glass-card">
       <button class="modal-close-btn" onclick="closeResumeUploadModal()">&times;</button>
@@ -362,6 +341,7 @@
       </div>
     </div>
   </div>
+  </main>
 
   <script src="script.js"></script>
 </body>

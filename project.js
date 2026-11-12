@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loader) {
         let progress = 0;
         const interval = setInterval(() => {
-            progress += Math.floor(Math.random() * 15) + 12;
+            progress += Math.floor(Math.random() * 20) + 15;
             if (progress >= 100) {
                 progress = 100;
                 clearInterval(interval);
@@ -15,22 +15,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (loaderFill) loaderFill.style.width = `${progress}%`;
                 setTimeout(() => {
                     loader.classList.add('hidden');
-                }, 200);
+                }, 150);
             } else {
                 if (loaderText) loaderText.textContent = `Loading ${progress}%`;
                 if (loaderFill) loaderFill.style.width = `${progress}%`;
             }
-        }, 25);
+        }, 20);
     }
 });
 
 const projects = [
     {
+        id: "orogoo",
+        title: "Orogoo Job Portal",
+        category: "agency",
+        image: "images/orogoos.png",
+        description: "Short-term job discovery & shift hiring platform with 40% faster application flow and candidate search dashboards.",
+        tags: ["Job Portal", "Gig Economy", "UI/UX Design", "Angular"],
+        liveUrl: "https://orogoo.com/#/home",
+        featured: true
+    },
+    {
+        id: "imperial-weaves",
+        title: "Imperial Weaves",
+        category: "fashion",
+        image: "images/Imperial weaves.png",
+        description: "Luxury Kashmiri handloom saree & heritage textile storefront designed for artisan storytelling and 35% higher checkout conversion.",
+        tags: ["Handloom Textiles", "E-Commerce", "Luxury Fashion"],
+        liveUrl: "https://imperialweaves.com/",
+        featured: true
+    },
+    {
+        id: "hardcode-shampoo",
+        title: "Hardcode Shampoo",
+        category: "ecommerce",
+        image: "images/Hardcode.png",
+        description: "Conversion-engineered D2C men's grooming storefront featuring transparent ingredient breakdown and streamlined 2-step checkout.",
+        tags: ["Men's Grooming", "E-Commerce", "D2C Storefront"],
+        liveUrl: "https://www.hardcodeshampoo.com/",
+        featured: true
+    },
+    {
         id: "atharv-ayurvedic",
         title: "Atharv Ayurvedic Drugs",
         category: "ecommerce",
         image: "images/Atharv Ayurvedic Drugs.png",
-        description: "E-Commerce & web platform design for Ayurvedic healthcare and herbal wellness products.",
+        description: "E-Commerce healthcare platform featuring GMP certified catalogue and 25% faster order placement.",
         tags: ["Ayurvedic Healthcare", "E-Commerce", "Web Design"],
         liveUrl: "https://atharvayurvedicdrugs.com/",
         featured: true
@@ -40,8 +70,8 @@ const projects = [
         title: "Dernier Cri",
         category: "fashion",
         image: "images/Derniercri.png",
-        description: "High-end luxury event management, couture fashion, and digital branding showcase platform.",
-        tags: ["Event Management", "Luxury Apparel", "Digital Magic"],
+        description: "Haute couture fashion & luxury event portal with real-time consultation booking flow.",
+        tags: ["Event Management", "Luxury Apparel", "Digital Showcase"],
         liveUrl: "https://derniercri.in/",
         featured: true
     },
@@ -50,7 +80,7 @@ const projects = [
         title: "Taabir",
         category: "fashion",
         image: "images/Taabir.png",
-        description: "Luxury Indian label & boutique fashion store website with responsive shopping user experience.",
+        description: "Luxury Indian label & boutique fashion store website with multi-column grid layouts and responsive shopping user experience.",
         tags: ["Luxury Ethnic", "Boutique Store", "Web Design"],
         liveUrl: "https://taabir.in/",
         featured: true
@@ -60,7 +90,7 @@ const projects = [
         title: "Digital Manjha",
         category: "agency",
         image: "images/Digital Manjha.png",
-        description: "Digital marketing agency portfolio, SEO growth strategy, and creative branding web platform.",
+        description: "Creative marketing agency portfolio and service architecture designed to scale client acquisition.",
         tags: ["Digital Agency", "Brand Strategy", "Web Design"],
         liveUrl: "https://digitalmanjha.com/",
         featured: true
@@ -70,54 +100,20 @@ const projects = [
         title: "Empros",
         category: "corporate",
         image: "images/Empros.png",
-        description: "Global logistics, ocean freight management, and industrial business service web portal.",
+        description: "Global freight tracking & ocean logistics portal making dense transport schedules effortlessly navigable.",
         tags: ["Global Logistics", "Freight Tracking", "Corporate UI"],
         liveUrl: "https://empros.in/",
         featured: true
-    },
-    {
-        id: "imperial-weaves",
-        title: "Imperial Weaves",
-        category: "fashion",
-        image: "images/Imperial weaves.png",
-        description: "Handcrafted luxury silk sarees & heritage handloom textile e-commerce website.",
-        tags: ["Handloom Textiles", "E-Commerce", "Web Design"],
-        liveUrl: "https://imperialweaves.com/"
-    },
-    {
-        id: "hardcode-shampoo",
-        title: "Hardcode Shampoo",
-        category: "ecommerce",
-        image: "images/Hardcode.png",
-        description: "Premium men's hair care & personal grooming e-commerce website design.",
-        tags: ["Men's Grooming", "E-Commerce", "UI/UX"],
-        liveUrl: "https://www.hardcodeshampoo.com/"
-    },
-    {
-        id: "orogoo",
-        title: "Orogoo Job Portal",
-        category: "agency",
-        image: "images/orogoos.png",
-        description: "Responsive candidate dashboards and shift recruitment user flows for short-term jobs.",
-        tags: ["Job Portal", "Gig Economy", "UI/UX Design"],
-        liveUrl: "https://orogoo.com/#/home"
     },
     {
         id: "tuespot",
         title: "TueSpot Solutions",
         category: "corporate",
         image: "images/TueSpot Solutions.png",
-        description: "Enterprise UI architecture, component system, and QA workflow for client platforms.",
+        description: "Enterprise UI architecture and synchronized design system reducing feature build time by 45%.",
         tags: ["Design System", "Enterprise UI", "Angular"],
-        liveUrl: "https://tuespotsolutions.com/web/#/home"
-    },
-    {
-        id: "freight-pulse",
-        title: "Freight Pulse",
-        category: "corporate",
-        image: "images/Freight Pulse.png",
-        description: "Real-time logistics fleet tracking dashboard with GPS route analytics.",
-        tags: ["Fleet Analytics", "Dashboard", "Logistics UI"]
+        liveUrl: "https://tuespotsolutions.com/web/#/home",
+        featured: true
     },
     {
         id: "grand-mughal",
@@ -129,20 +125,12 @@ const projects = [
         liveUrl: "https://www.grandmughaldarbar.com.tuespotsolutions.com/home"
     },
     {
-        id: "car-dealership",
-        title: "Car Dealer Ship",
-        category: "ecommerce",
-        image: "images/Car Dealer Ship.png",
-        description: "Automotive showcase, 360° vehicle view, and test-drive booking web platform.",
-        tags: ["Automotive", "EMI Calculator", "Web Design"]
-    },
-    {
-        id: "soma-library",
-        title: "Soma Digital Library",
+        id: "freight-pulse",
+        title: "Freight Pulse",
         category: "corporate",
-        image: "images/Soma Digital Library.png",
-        description: "Digital academic library, distraction-free reader UI, and research bookmarking system.",
-        tags: ["Digital Library", "E-Reader", "UI/UX Design"]
+        image: "images/Freight Pulse.png",
+        description: "Real-time logistics fleet tracking dashboard with GPS route analytics.",
+        tags: ["Fleet Analytics", "Dashboard", "Logistics UI"]
     },
     {
         id: "orogoo-app",
@@ -207,7 +195,7 @@ function renderProjects(filter = "all") {
 
     filtered.forEach(project => {
         const liveBtnHTML = project.liveUrl
-            ? `<a href="${project.liveUrl}" target="_blank" class="card-live-btn" onclick="event.stopPropagation();" title="Visit Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>`
+            ? `<a href="${project.liveUrl}" target="_blank" rel="noopener" class="card-live-btn" onclick="event.stopPropagation();" title="Visit Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>`
             : ``;
 
         const badgeHTML = project.featured
@@ -215,7 +203,7 @@ function renderProjects(filter = "all") {
             : ``;
 
         grid.innerHTML += `
-        <div class="project-card glass-card" onclick="location.href='project-detail.html?id=${project.id}'" style="cursor: pointer;">
+        <div class="project-card glass-card" onclick="location.href='project-detail.html?id=${project.id}'" style="cursor: pointer;" data-category="${project.category}">
             <div class="project-image-box">
                 <img src="${project.image}" alt="${project.title}" loading="lazy">
                 <div class="project-card-overlay">
